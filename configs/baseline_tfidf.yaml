@@ -1,0 +1,12 @@
+# Baseline 1: TF-IDF + logistic regression (text only)
+data_dir: /kaggle/input/crisismmd      # local: data/  (override with --data-dir)
+output_dir: outputs/baseline_tfidf_lr
+tasks: [informative, humanitarian, damage]
+seed: 42
+wandb_project: crisislens
+
+model:
+  C_grid: [0.25, 1.0, 4.0, 16.0]       # picked on dev macro-F1
+  ngram_max: 2
+  min_df: 2
+  max_features: 50000

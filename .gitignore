@@ -1,0 +1,23 @@
+# data and models never go in git
+data/
+*.tar.gz
+*.zip
+*.pt
+*.bin
+*.safetensors
+*.onnx
+outputs/*
+!outputs/.gitkeep
+wandb/
+
+# secrets
+.env
+
+# python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
