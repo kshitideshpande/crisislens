@@ -1,0 +1,5 @@
+# Strip notebook outputs on commit, so tweet text or images printed while
+# exploring CrisisMMD never reach GitHub. One-time setup per clone:
+#   pip install nbstripout && nbstripout --install
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb

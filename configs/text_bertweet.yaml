@@ -1,0 +1,36 @@
+# Text only: fine-tuned BERTweet
+# Run:  python -m crisislens.train --config configs/text_bertweet.yaml --seed 42
+name: text_bertweet
+data_dir: data/crisismmd            # folder with CrisisMMD_v2.0/ and crisismmd_datasplit_agreed_label/
+output_dir: outputs/text_bertweet
+tasks: [informative, humanitarian, damage]
+holdout_event: null            # e.g. california_wildfires: train without it, test only on it
+
+model:
+  mode: text                       # text | image | concat | gated
+  text_encoder: vinai/bertweet-base
+  image_encoder: openai/clip-vit-base-patch32
+  hidden_dim: 512
+  dropout: 0.2
+  modality_dropout: 0.0          # chance of hiding text or image per post while training
+  freeze_text: false
+  freeze_image: false
+
+data:
+  max_length: 128                    # BERTweet's limit is 130 positions
+  num_workers: 4                     # set 0 if you see multiprocessing errors
+
+train:
+  epochs: 5
+  batch_size: 16                     # fits a 16 GB M-series Mac with both encoders
+  grad_accum: 2                      # effective batch size 32
+  lr_text: 2.0e-5
+  lr_image: 1.0e-5
+  lr_head: 1.0e-3
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  class_weighted: true               # inverse-frequency loss weights per task
+  patience: 2                        # early stop after 2 epochs without dev improvement
+  max_grad_norm: 1.0
+  amp: auto                          # fp16 autocast on CUDA only; MPS/CPU stay fp32
+  max_train_batches: null            # small number = quick smoke test

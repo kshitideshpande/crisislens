@@ -1,0 +1,9 @@
+# Demo app (no PyTorch). Versions tested together.
+streamlit==1.65.0
+pydeck==0.9.3
+onnxruntime==1.31.0
+transformers==5.19.0
+tokenizers==0.23.3
+huggingface_hub==2.2.0
+numpy==2.5.4
+pillow==12.3.0

@@ -1,5 +1,5 @@
 # Baseline 1: TF-IDF + logistic regression (text only)
-data_dir: /kaggle/input/crisismmd      # local: data/  (override with --data-dir)
+data_dir: data/crisismmd
 output_dir: outputs/baseline_tfidf_lr
 tasks: [informative, humanitarian, damage]
 seed: 42

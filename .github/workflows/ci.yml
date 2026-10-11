@@ -8,5 +8,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -e ".[dev]"
+          cache: pip
+      # CPU-only PyTorch keeps CI small; tests use tiny random models, no downloads.
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[train,serve,dev]"
       - run: pytest -q

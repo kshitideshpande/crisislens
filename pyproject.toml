@@ -4,8 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crisislens"
-version = "0.1.0"
+version = "1.0.0"
 description = "Multimodal (text + image) triage of disaster social media posts"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Kshiti Deshpande"}]
 requires-python = ">=3.10"
 dependencies = [
   "pandas>=2.0",
@@ -17,11 +20,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "jupyter", "seaborn"]
+# Training and evaluation (Mac M-series: plain `pip install torch` includes the MPS GPU backend)
+train = ["torch>=2.4", "transformers>=4.46", "captum>=0.7", "onnx>=1.16", "onnxruntime>=1.18"]
+# Demo app, API, and scenario building (no PyTorch needed)
+serve = ["onnxruntime>=1.18", "transformers>=4.46", "huggingface_hub>=0.25", "streamlit>=1.40", "pydeck>=0.9",
+         "fastapi>=0.110", "uvicorn>=0.30"]
+geo = ["spacy>=3.7"]
 track = ["wandb"]
+dev = ["pytest>=8", "httpx>=0.27", "jupyter", "nbclient", "seaborn", "nbstripout"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]

@@ -158,3 +158,68 @@ def load_task(data_dir: str | Path, task: str) -> dict[str, pd.DataFrame]:
 def label_names(train_df: pd.DataFrame) -> list[str]:
     """Fixed, sorted label order taken from the training split."""
     return sorted(train_df["label"].unique())
+
+
+# ---------------------------------------------------------------------------
+# Multi-task table: one row per (tweet, image) with a label column per task.
+# ---------------------------------------------------------------------------
+
+SPLIT_RANK = {"train": 0, "dev": 1, "test": 2}
+
+
+def build_multitask_table(data_dir: str | Path, tasks: tuple[str, ...] = tuple(TASKS)) -> pd.DataFrame:
+    """Merge the per-task split files into one table for multi-task training.
+
+    Each task file has its own rows (agreed-label filtering differs by task),
+    so a (tweet, image) pair may have a label for one task and not another.
+    Missing labels are NaN and are ignored by the loss.
+
+    Columns: row_id, tweet_id, image, event_name, text,
+             label_<task>, split_<task>   (one pair per task)
+             holdout_split                 (the most held-out split across tasks)
+
+    Leakage guard: a pair that is dev/test for ANY task is never trained on for
+    ANY task. `train_mask(df, task)` applies this, so official test sets stay
+    exactly as published while the model never sees a test image or tweet.
+    """
+    keys = ["tweet_id", "image"]
+    per_task = {}
+    for task in tasks:
+        frames = []
+        for split in SPLITS:
+            df = load_split(data_dir, task, split)
+            if "event_name" not in df:
+                df["event_name"] = "unknown"
+            df = df[keys + ["text", "event_name", "label"]].rename(columns={"label": f"label_{task}"})
+            df[f"split_{task}"] = split
+            frames.append(df)
+        per_task[task] = pd.concat(frames, ignore_index=True).drop_duplicates(keys)
+
+    # Base table: every (tweet, image) pair seen in any task, with its text and event.
+    base = pd.concat([d[keys + ["text", "event_name"]] for d in per_task.values()], ignore_index=True)
+    merged = base.drop_duplicates(keys).reset_index(drop=True)
+    for task, d in per_task.items():
+        merged = merged.merge(d[keys + [f"label_{task}", f"split_{task}"]], on=keys, how="left")
+
+    merged["row_id"] = merged["tweet_id"].astype(str) + "|" + merged["image"].astype(str)
+
+    split_cols = [f"split_{t}" for t in tasks]
+    ranks = merged[split_cols].apply(lambda col: col.map(SPLIT_RANK))
+    merged["holdout_split"] = ranks.max(axis=1).map({v: k for k, v in SPLIT_RANK.items()})
+    front = ["row_id", "tweet_id", "image", "event_name", "text"]
+    return merged[front + [c for c in merged.columns if c not in front]].reset_index(drop=True)
+
+
+def train_mask(df: pd.DataFrame, task: str) -> pd.Series:
+    """Rows whose `task` label may be used for training (see leakage guard above)."""
+    return (df[f"split_{task}"] == "train") & (df["holdout_split"] == "train")
+
+
+def eval_mask(df: pd.DataFrame, task: str, split: str) -> pd.Series:
+    """Rows in the official `split` for `task`."""
+    return df[f"split_{task}"] == split
+
+
+def leakage_report(df: pd.DataFrame, tasks: tuple[str, ...] = tuple(TASKS)) -> dict[str, int]:
+    """How many training labels the leakage guard removes, per task."""
+    return {t: int(((df[f"split_{t}"] == "train") & ~train_mask(df, t)).sum()) for t in tasks}

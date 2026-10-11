@@ -21,3 +21,10 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# demo build products (photos + replay ARE committed; caches and builds are not)
+build/
+exported/
+
+demo/scenario/geocode_cache.json
+demo/scenario/contact_sheet.jpg
