@@ -34,4 +34,5 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]                   # so tests can import service/ (not an installed package)
 filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
