@@ -17,7 +17,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ORDER = ["baseline_tfidf_lr", "text_bertweet", "image_clip", "late_fusion", "fusion_concat", "fusion_gated"]
+ORDER = ["baseline_tfidf_lr", "text_bertweet", "image_clip", "late_fusion", "fusion_concat", "fusion_gated",
+         "fusion_gated_md40"]
 PRETTY = {
     "baseline_tfidf_lr": "TF-IDF + LR (text)",
     "text_bertweet": "BERTweet (text)",
@@ -25,6 +26,7 @@ PRETTY = {
     "late_fusion": "Late fusion (avg probs)",
     "fusion_concat": "Concat fusion",
     "fusion_gated": "Gated fusion",
+    "fusion_gated_md40": "Gated fusion, modality dropout 0.4",
     "fusion_gated_holdout": "Gated fusion, unseen disaster",
 }
 TASK_ORDER = ["informative", "humanitarian", "damage"]
@@ -78,12 +80,13 @@ def markdown_table(summary: pd.DataFrame, models: list[str]) -> str:
     return "\n".join(lines)
 
 
-def extras(outputs: Path) -> str:
-    """Calibration and robustness for the deployed model, averaged over seeds."""
-    evals = [json.loads(p.read_text()) for p in sorted(outputs.glob("fusion_gated/seed_*/evaluation.json"))]
+def extras(outputs: Path, model: str = "fusion_gated") -> str:
+    """Calibration and robustness for one gated model, averaged over the seeds that have them."""
+    paths = sorted(outputs.glob(f"{model}/seed_*/evaluation.json"))
+    evals = [json.loads(p.read_text()) for p in paths]
     if not evals:
         return ""
-    lines = ["", "**Gated fusion, extra checks (test split)**", ""]
+    lines = ["", f"**{PRETTY.get(model, model)}, extra checks (test split)**", ""]
     for task in TASK_ORDER:
         cal = [e["calibration"][task] for e in evals if task in e.get("calibration", {})]
         if cal:
@@ -98,11 +101,13 @@ def extras(outputs: Path) -> str:
                      f"test recall {r:.3f}, precision {p:.3f}")
     rob = [e["robustness"] for e in evals if e.get("robustness")]
     if rob:
+        seeds = [p.parent.name.removeprefix("seed_") for p, e in zip(paths, evals) if e.get("robustness")]
+        lines.append(f"- Missing-modality tests (seed{'s' if len(seeds) > 1 else ''} {', '.join(seeds)}):")
         for cond in ("full", "no_image", "no_text"):
             vals = [r[cond] for r in rob if cond in r]
             if vals:
                 cells = ", ".join(f"{t} {np.mean([v[t] for v in vals]):.3f}" for t in TASK_ORDER if t in vals[0])
-                lines.append(f"- Macro-F1 with {cond.replace('_', ' ')}: {cells}")
+                lines.append(f"  - Macro-F1 with {cond.replace('_', ' ')}: {cells}")
     return "\n".join(lines)
 
 
@@ -123,12 +128,14 @@ def main() -> None:
     if (summary["model"] == "fusion_gated_holdout").any():
         md += ["", "**Unseen disaster** (trained without it; tested only on it)", "",
                markdown_table(summary, ["fusion_gated_holdout"])]
-    md.append(extras(outputs))
+    md += [e for e in (extras(outputs, m) for m in ("fusion_gated", "fusion_gated_md40")) if e]
 
     g = summary.set_index(["model", "task"])
-    if ("fusion_gated", "humanitarian") in g.index and ("text_bertweet", "humanitarian") in g.index:
-        gain = g.loc[("fusion_gated", "humanitarian"), "macro_f1_mean"] - g.loc[("text_bertweet", "humanitarian"), "macro_f1_mean"]
-        md += ["", f"Adding the image (gated fusion vs. text-only BERTweet) changes humanitarian macro-F1 by {gain:+.3f}."]
+    deployed = "fusion_gated_md40" if ("fusion_gated_md40", "humanitarian") in g.index else "fusion_gated"
+    if (deployed, "humanitarian") in g.index and ("text_bertweet", "humanitarian") in g.index:
+        gain = g.loc[(deployed, "humanitarian"), "macro_f1_mean"] - g.loc[("text_bertweet", "humanitarian"), "macro_f1_mean"]
+        md += ["", f"Adding the image ({PRETTY[deployed]} vs. text-only BERTweet) changes humanitarian macro-F1 "
+                   f"by {gain:+.3f}."]
 
     text = "\n".join(md) + "\n"
     (outputs / "results.md").write_text(text)

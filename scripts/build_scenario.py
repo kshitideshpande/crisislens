@@ -138,7 +138,13 @@ def fetch_images(only: list[str] | None, skip: int) -> None:
         with open(sources_path, newline="") as f:
             existing = {r["post_id"]: r for r in csv.DictReader(f)}
 
-    for post in read_posts():
+    posts = read_posts()
+    with_photo = {p["post_id"] for p in posts if p["image_query"].strip()}
+    for pid in set(existing) - with_photo:  # post turned text-only: drop its photo and credit
+        existing.pop(pid)
+        (images_dir / f"{pid}.jpg").unlink(missing_ok=True)
+
+    for post in posts:
         pid, query = post["post_id"], post["image_query"].strip()
         if not query or (only and pid not in only) or (not only and pid in existing):
             continue

@@ -130,3 +130,37 @@ def test_onnx_matches_pytorch_on_new_shapes(trained, exported_model):
             ref = model({k: torch.from_numpy(v) for k, v in feeds.items()})
         for t in TASK_LIST:
             assert np.abs(onnx_out[f"logits_{t}"] - ref[t].numpy()).max() < 1e-4
+
+
+def test_posts_without_image_go_to_text_fallback(trained, exported_model, tmp_path):
+    import shutil
+
+    from crisislens.export_onnx import export
+
+    exported = shutil.copytree(exported_model, tmp_path / "exported")  # leave the shared fixture untouched
+
+    text_run = trained / "text_bertweet" / "seed_42"
+    model, tok, proc, cfg = load_trained_model(text_run / "model.pt", make_tiny_encoders())
+    export(model, tok, proc, cfg, exported / "text_fallback", calibrate_run(text_run, TASK_LIST))
+
+    pred = OnnxPredictor(exported)
+    assert pred.fallback is not None
+    img = Image.new("RGB", (50, 30), (200, 40, 40))
+    texts = ["Bridge collapsed", "no image here", "Volunteers needed at the shelter"]
+    out = pred.predict(texts, [img, None, img])
+    assert [r["model"] for r in out] == ["fusion_gated", "text_bertweet", "fusion_gated"]
+    assert out[1]["image_reliance"] == 0.0
+    # Same answers as calling each model on its own posts.
+    assert out[1]["humanitarian"] == pred.fallback.predict([texts[1]])[0]["humanitarian"]
+    alone = OnnxPredictor(exported, use_fallback=False).predict([texts[0], texts[2]], [img, img])
+    assert [out[0]["humanitarian"], out[2]["humanitarian"]] == [a["humanitarian"] for a in alone]
+
+    exp = pred.explain("no image here", None)
+    assert exp["prediction"]["model"] == "text_bertweet" and exp["heatmap"] is None
+
+
+def test_predictor_normalizes_text_like_training(exported_model):
+    pred = OnnxPredictor(exported_model)
+    raw = pred.encode_texts(["RT @fema Shelter open at https://t.co/abc &amp; more"])
+    clean = pred.encode_texts(["@USER Shelter open at HTTPURL & more"])
+    assert raw["input_ids"].tolist() == clean["input_ids"].tolist()

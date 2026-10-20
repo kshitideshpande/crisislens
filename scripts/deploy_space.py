@@ -34,7 +34,8 @@ def assemble(out: Path = BUILD, scenario: Path = ROOT / "demo" / "scenario") -> 
     (out / "crisislens").mkdir(parents=True)
     for name in ("streamlit_app.py", "Dockerfile", "requirements.txt", "README.md"):
         shutil.copy(ROOT / "app" / name, out / name)
-    shutil.copy(ROOT / "src" / "crisislens" / "inference.py", out / "crisislens" / "inference.py")
+    for name in ("inference.py", "text.py"):
+        shutil.copy(ROOT / "src" / "crisislens" / name, out / "crisislens" / name)
     (out / "crisislens" / "__init__.py").write_text("")
 
     (out / "scenario").mkdir()

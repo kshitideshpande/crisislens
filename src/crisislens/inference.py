@@ -20,6 +20,8 @@ from typing import Callable, Sequence
 
 import numpy as np
 
+from crisislens.text import normalize_tweet
+
 # ---------------------------------------------------------------------------
 # Generic occlusion (no model dependency; explain.py reuses occlude_image)
 # ---------------------------------------------------------------------------
@@ -67,10 +69,17 @@ def softmax(z: np.ndarray, temperature: float = 1.0) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 
-class OnnxPredictor:
-    """Loads exported/{model.int8.onnx, meta.json, tokenizer files, preprocessor_config.json}."""
+FALLBACK_DIR = "text_fallback"
 
-    def __init__(self, model_dir: str | Path, model_file: str | None = None):
+
+class OnnxPredictor:
+    """Loads exported/{model.int8.onnx, meta.json, tokenizer files, preprocessor_config.json}.
+
+    If exported/text_fallback/ holds a text-only export, posts without an image go to it:
+    the fusion model is weaker than a text model when the image is missing.
+    """
+
+    def __init__(self, model_dir: str | Path, model_file: str | None = None, use_fallback: bool = True):
         import onnxruntime as ort
 
         self.dir = Path(model_dir)
@@ -86,6 +95,9 @@ class OnnxPredictor:
         self.temperature: dict[str, float] = self.meta.get("temperature", {})
         self.flag = self.meta.get("flag")
         self.tokenizer, self.processor = self._load_preprocessing()
+        fallback = self.dir / FALLBACK_DIR
+        self.fallback = (OnnxPredictor(fallback, use_fallback=False)
+                         if use_fallback and (fallback / "meta.json").exists() else None)
 
     def _load_preprocessing(self):
         tokenizer = processor = None
@@ -105,7 +117,8 @@ class OnnxPredictor:
     def encode_texts(self, texts: Sequence[str]) -> dict[str, np.ndarray]:
         if self.tokenizer is None:
             return {}
-        enc = self.tokenizer([t if t and t.strip() else "." for t in texts], padding=True, truncation=True,
+        texts = [normalize_tweet(t) for t in texts]  # same cleanup as training
+        enc = self.tokenizer([t if t else "." for t in texts], padding=True, truncation=True,
                              max_length=self.meta.get("max_length", 128), return_tensors="np")
         return {"input_ids": enc["input_ids"].astype(np.int64), "attention_mask": enc["attention_mask"].astype(np.int64)}
 
@@ -134,9 +147,23 @@ class OnnxPredictor:
     # -- public API ---------------------------------------------------------
     def predict(self, texts: Sequence[str], images: Sequence | None = None) -> list[dict]:
         """One result per post: label, confidence and probabilities per task, plus the urgent flag."""
+        texts = list(texts)
         images = list(images) if images is not None else [None] * len(texts)
-        outputs = self._run(self._feeds(list(texts), images))
-        results = [dict() for _ in texts]
+        if self.fallback is None:
+            return self._predict(texts, images)
+        results: list[dict] = [{} for _ in texts]
+        for has_image in (True, False):
+            idx = [i for i, im in enumerate(images) if (im is not None) == has_image]
+            if not idx:
+                continue
+            model = self if has_image else self.fallback
+            for i, r in zip(idx, model._predict([texts[i] for i in idx], [images[i] for i in idx])):
+                results[i] = r if has_image else {**r, "image_reliance": 0.0}
+        return results
+
+    def _predict(self, texts: list[str], images: list) -> list[dict]:
+        outputs = self._run(self._feeds(texts, images))
+        results = [{"model": self.meta["name"]} for _ in texts]
         for task in self.tasks:
             probs = self._probs(outputs, task)
             names = self.label_maps[task]
@@ -154,6 +181,10 @@ class OnnxPredictor:
 
     def explain(self, text: str, image=None, task: str = "humanitarian", grid: int = 7) -> dict:
         """Prediction plus word and image-region importance for its predicted class."""
+        if image is None and self.fallback is not None:
+            exp = self.fallback.explain(text, None, task, grid)
+            exp["prediction"]["image_reliance"] = 0.0
+            return exp
         pred = self.predict([text], [image])[0]
         target = self.label_maps[task].index(pred[task]["label"])
 

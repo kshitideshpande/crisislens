@@ -1,0 +1,8955 @@
+{
+ "scenario": {
+  "name": "Hurricane Delphine (simulated)",
+  "description": "A fictional Category 3 hurricane making landfall near Galveston, Texas. Posts were written for this demo; photos are public-domain images from past real storms.",
+  "region": {
+   "name": "Greater Houston and the upper Texas coast",
+   "west": -96.3,
+   "south": 28.8,
+   "east": -93.7,
+   "north": 30.4,
+   "suffix": "Texas"
+  },
+  "simulated": true,
+  "duration_minutes": 3800
+ },
+ "model": {
+  "name": "fusion_gated_md40",
+  "flag_threshold": 0.5800127396316229,
+  "label_maps": {
+   "informative": [
+    "informative",
+    "not_informative"
+   ],
+   "humanitarian": [
+    "affected_individuals",
+    "infrastructure_and_utility_damage",
+    "not_humanitarian",
+    "other_relevant_information",
+    "rescue_volunteering_or_donation_effort"
+   ],
+   "damage": [
+    "little_or_no_damage",
+    "mild_damage",
+    "severe_damage"
+   ]
+  }
+ },
+ "posts": [
+  {
+   "post_id": "p01",
+   "minute": 0,
+   "text": "Hurricane Delphine now a Cat 3, landfall expected near Galveston tonight. Finish your prep now #Delphine #hounews",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.9403368830680847,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.0351,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9382,
+     "not_informative": 0.0618
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0027,
+     "infrastructure_and_utility_damage": 0.0171,
+     "not_humanitarian": 0.0246,
+     "other_relevant_information": 0.9403,
+     "rescue_volunteering_or_donation_effort": 0.0153
+    },
+    "damage": {
+     "little_or_no_damage": 0.2403,
+     "mild_damage": 0.3467,
+     "severe_damage": 0.413
+    }
+   },
+   "words": [
+    [
+     "Hurricane",
+     -0.0077
+    ],
+    [
+     "Delphine",
+     -0.0012
+    ],
+    [
+     "now",
+     0.0022
+    ],
+    [
+     "a",
+     -0.0001
+    ],
+    [
+     "Cat",
+     0.0083
+    ],
+    [
+     "3,",
+     -0.0022
+    ],
+    [
+     "landfall",
+     0.0043
+    ],
+    [
+     "expected",
+     -0.0005
+    ],
+    [
+     "near",
+     -0.0013
+    ],
+    [
+     "Galveston",
+     -0.0039
+    ],
+    [
+     "tonight.",
+     0.003
+    ],
+    [
+     "Finish",
+     0.0023
+    ],
+    [
+     "your",
+     0.0115
+    ],
+    [
+     "prep",
+     0.0011
+    ],
+    [
+     "now",
+     -0.0023
+    ],
+    [
+     "#Delphine",
+     -0.0029
+    ],
+    [
+     "#hounews",
+     -0.0015
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.38723,
+    "lon": -94.99274,
+    "name": "Galveston"
+   }
+  },
+  {
+   "post_id": "p02",
+   "minute": 25,
+   "text": "Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.47228875756263733,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.8281,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.8756,
+     "not_informative": 0.1244
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0754,
+     "infrastructure_and_utility_damage": 0.2804,
+     "not_humanitarian": 0.0863,
+     "other_relevant_information": 0.0855,
+     "rescue_volunteering_or_donation_effort": 0.4723
+    },
+    "damage": {
+     "little_or_no_damage": 0.2175,
+     "mild_damage": 0.3257,
+     "severe_damage": 0.4568
+    }
+   },
+   "words": [
+    [
+     "Lines",
+     0.1514
+    ],
+    [
+     "out",
+     0.2159
+    ],
+    [
+     "the",
+     0.1725
+    ],
+    [
+     "door",
+     0.2252
+    ],
+    [
+     "at",
+     0.1346
+    ],
+    [
+     "the",
+     -0.014
+    ],
+    [
+     "grocery",
+     -0.0929
+    ],
+    [
+     "store",
+     0.0059
+    ],
+    [
+     "in",
+     -0.0543
+    ],
+    [
+     "Pearland,",
+     0.2682
+    ],
+    [
+     "water",
+     0.3762
+    ],
+    [
+     "and",
+     0.3062
+    ],
+    [
+     "bread",
+     0.2728
+    ],
+    [
+     "almost",
+     -0.1178
+    ],
+    [
+     "gone",
+     0.094
+    ],
+    [
+     "#Delphine",
+     0.1405
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.56398,
+    "lon": -95.28643,
+    "name": "Pearland"
+   }
+  },
+  {
+   "post_id": "p03",
+   "minute": 60,
+   "text": "Mandatory evacuation for Galveston Island in effect. Traffic on I-45 northbound barely moving #Delphine",
+   "image": "images/p03.jpg",
+   "category": "not_humanitarian",
+   "category_confidence": 0.5935577750205994,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.2809,
+   "flagged": false,
+   "image_reliance": 0.5978516936302185,
+   "probs": {
+    "informative": {
+     "informative": 0.6423,
+     "not_informative": 0.3577
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0417,
+     "infrastructure_and_utility_damage": 0.149,
+     "not_humanitarian": 0.5936,
+     "other_relevant_information": 0.1256,
+     "rescue_volunteering_or_donation_effort": 0.0902
+    },
+    "damage": {
+     "little_or_no_damage": 0.5546,
+     "mild_damage": 0.3757,
+     "severe_damage": 0.0697
+    }
+   },
+   "words": [
+    [
+     "Mandatory",
+     0.0487
+    ],
+    [
+     "evacuation",
+     -0.2017
+    ],
+    [
+     "for",
+     -0.0186
+    ],
+    [
+     "Galveston",
+     0.0177
+    ],
+    [
+     "Island",
+     -0.0069
+    ],
+    [
+     "in",
+     0.0077
+    ],
+    [
+     "effect.",
+     -0.0501
+    ],
+    [
+     "Traffic",
+     0.0452
+    ],
+    [
+     "on",
+     -0.0298
+    ],
+    [
+     "I-45",
+     -0.017
+    ],
+    [
+     "northbound",
+     0.0092
+    ],
+    [
+     "barely",
+     0.0072
+    ],
+    [
+     "moving",
+     -0.0282
+    ],
+    [
+     "#Delphine",
+     0.0148
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.00419999985024333,
+     -0.03929999843239784,
+     0.02449999935925007,
+     0.030500000342726707,
+     -0.042500000447034836,
+     0.014100000262260437,
+     0.017899999395012856
+    ],
+    [
+     0.014999999664723873,
+     0.03620000183582306,
+     0.02459999918937683,
+     0.06239999830722809,
+     0.04740000143647194,
+     0.07989999651908875,
+     0.031199999153614044
+    ],
+    [
+     0.0007999999797903001,
+     0.13930000364780426,
+     0.061900001019239426,
+     0.09019999951124191,
+     0.14059999585151672,
+     0.14380000531673431,
+     0.06350000202655792
+    ],
+    [
+     -0.03700000047683716,
+     0.08829999715089798,
+     0.06430000066757202,
+     0.07209999859333038,
+     0.046300001442432404,
+     0.12860000133514404,
+     0.0982000008225441
+    ],
+    [
+     -0.08049999922513962,
+     0.01600000075995922,
+     -0.021900000050663948,
+     0.10249999910593033,
+     -0.010300000198185444,
+     0.0020000000949949026,
+     0.08479999750852585
+    ],
+    [
+     -0.003000000026077032,
+     0.010499999858438969,
+     0.07500000298023224,
+     0.04520000144839287,
+     -0.009200000204145908,
+     0.07119999825954437,
+     0.016100000590085983
+    ],
+    [
+     0.03689999878406525,
+     0.013399999588727951,
+     -0.004800000227987766,
+     -0.0071000000461936,
+     -0.014299999922513962,
+     0.016599999740719795,
+     -0.035100001841783524
+    ]
+   ],
+   "location": {
+    "lat": 29.38723,
+    "lon": -94.99274,
+    "name": "Galveston"
+   }
+  },
+  {
+   "post_id": "p04",
+   "minute": 95,
+   "text": "Anyone know a good pizza place still open in Katy? asking for a friend lol #hurricaneparty",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.946510910987854,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.0236,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.0886,
+     "not_informative": 0.9114
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0023,
+     "infrastructure_and_utility_damage": 0.0076,
+     "not_humanitarian": 0.9465,
+     "other_relevant_information": 0.0299,
+     "rescue_volunteering_or_donation_effort": 0.0137
+    },
+    "damage": {
+     "little_or_no_damage": 0.6346,
+     "mild_damage": 0.27,
+     "severe_damage": 0.0953
+    }
+   },
+   "words": [
+    [
+     "Anyone",
+     0.0097
+    ],
+    [
+     "know",
+     -0.0041
+    ],
+    [
+     "a",
+     0.0042
+    ],
+    [
+     "good",
+     0.0031
+    ],
+    [
+     "pizza",
+     0.0525
+    ],
+    [
+     "place",
+     -0.0024
+    ],
+    [
+     "still",
+     0.0146
+    ],
+    [
+     "open",
+     0.0269
+    ],
+    [
+     "in",
+     -0.0011
+    ],
+    [
+     "Katy?",
+     -0.0079
+    ],
+    [
+     "asking",
+     0.0189
+    ],
+    [
+     "for",
+     0.008
+    ],
+    [
+     "a",
+     0.0036
+    ],
+    [
+     "friend",
+     0.0061
+    ],
+    [
+     "lol",
+     0.0108
+    ],
+    [
+     "#hurricaneparty",
+     -0.0231
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.78579,
+    "lon": -95.8244,
+    "name": "Katy"
+   }
+  },
+  {
+   "post_id": "p05",
+   "minute": 140,
+   "text": "Wind picking up fast in Galveston, waves already over the seawall #Delphine",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.689749538898468,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.1217,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.7865,
+     "not_informative": 0.2135
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0042,
+     "infrastructure_and_utility_damage": 0.0879,
+     "not_humanitarian": 0.1885,
+     "other_relevant_information": 0.6897,
+     "rescue_volunteering_or_donation_effort": 0.0296
+    },
+    "damage": {
+     "little_or_no_damage": 0.5487,
+     "mild_damage": 0.2757,
+     "severe_damage": 0.1756
+    }
+   },
+   "words": [
+    [
+     "Wind",
+     -0.0605
+    ],
+    [
+     "picking",
+     -0.0783
+    ],
+    [
+     "up",
+     0.0434
+    ],
+    [
+     "fast",
+     0.1162
+    ],
+    [
+     "in",
+     0.0317
+    ],
+    [
+     "Galveston,",
+     -0.107
+    ],
+    [
+     "waves",
+     -0.0061
+    ],
+    [
+     "already",
+     0.1953
+    ],
+    [
+     "over",
+     0.09
+    ],
+    [
+     "the",
+     0.032
+    ],
+    [
+     "seawall",
+     0.035
+    ],
+    [
+     "#Delphine",
+     -0.0077
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.38723,
+    "lon": -94.99274,
+    "name": "Galveston"
+   }
+  },
+  {
+   "post_id": "p06",
+   "minute": 180,
+   "text": "Praying for everyone on the coast tonight. Stay safe Texas \u2764\ufe0f #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.8596106767654419,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.0355,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.1692,
+     "not_informative": 0.8308
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0034,
+     "infrastructure_and_utility_damage": 0.0034,
+     "not_humanitarian": 0.8596,
+     "other_relevant_information": 0.1049,
+     "rescue_volunteering_or_donation_effort": 0.0287
+    },
+    "damage": {
+     "little_or_no_damage": 0.3802,
+     "mild_damage": 0.3201,
+     "severe_damage": 0.2997
+    }
+   },
+   "words": [
+    [
+     "Praying",
+     0.2001
+    ],
+    [
+     "for",
+     0.0394
+    ],
+    [
+     "everyone",
+     0.1655
+    ],
+    [
+     "on",
+     0.0035
+    ],
+    [
+     "the",
+     0.0003
+    ],
+    [
+     "coast",
+     0.0029
+    ],
+    [
+     "tonight.",
+     -0.0223
+    ],
+    [
+     "Stay",
+     -0.0578
+    ],
+    [
+     "safe",
+     -0.0746
+    ],
+    [
+     "Texas",
+     -0.0336
+    ],
+    [
+     "\u2764\ufe0f",
+     0.001
+    ],
+    [
+     "#Delphine",
+     0.0181
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 30.11128,
+    "lon": -94.64263,
+    "name": "Texas"
+   }
+  },
+  {
+   "post_id": "p07",
+   "minute": 230,
+   "text": "Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine",
+   "image": "images/p07.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9493535757064819,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9699,
+   "flagged": true,
+   "image_reliance": 0.6537108421325684,
+   "probs": {
+    "informative": {
+     "informative": 0.9724,
+     "not_informative": 0.0276
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0087,
+     "infrastructure_and_utility_damage": 0.9494,
+     "not_humanitarian": 0.0154,
+     "other_relevant_information": 0.0148,
+     "rescue_volunteering_or_donation_effort": 0.0118
+    },
+    "damage": {
+     "little_or_no_damage": 0.0507,
+     "mild_damage": 0.1042,
+     "severe_damage": 0.8452
+    }
+   },
+   "words": [
+    [
+     "Power",
+     0.0172
+    ],
+    [
+     "just",
+     -0.0027
+    ],
+    [
+     "went",
+     -0.0022
+    ],
+    [
+     "out",
+     -0.0023
+    ],
+    [
+     "across",
+     0.0004
+    ],
+    [
+     "our",
+     0.007
+    ],
+    [
+     "whole",
+     0.0008
+    ],
+    [
+     "street",
+     0.003
+    ],
+    [
+     "in",
+     -0.0011
+    ],
+    [
+     "League",
+     -0.0076
+    ],
+    [
+     "City.",
+     -0.0002
+    ],
+    [
+     "Transformer",
+     -0.0055
+    ],
+    [
+     "blew,",
+     0.0012
+    ],
+    [
+     "saw",
+     0.0017
+    ],
+    [
+     "the",
+     -0.0019
+    ],
+    [
+     "flash",
+     -0.0092
+    ],
+    [
+     "#Delphine",
+     -0.0047
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0007999999797903001,
+     0.0038999998942017555,
+     0.004999999888241291,
+     0.005499999970197678,
+     0.009700000286102295,
+     0.00860000029206276,
+     0.0010999999940395355
+    ],
+    [
+     0.003800000064074993,
+     0.0034000000450760126,
+     0.007199999876320362,
+     0.005100000184029341,
+     0.0035000001080334187,
+     0.006200000178068876,
+     0.0026000000070780516
+    ],
+    [
+     0.007699999958276749,
+     0.006899999920278788,
+     0.00559999980032444,
+     0.003599999938160181,
+     0.0012000000569969416,
+     0.0038999998942017555,
+     0.002400000113993883
+    ],
+    [
+     0.004399999976158142,
+     0.009100000374019146,
+     0.0038999998942017555,
+     0.006099999882280827,
+     0.004699999932199717,
+     0.006200000178068876,
+     0.005100000184029341
+    ],
+    [
+     0.0027000000700354576,
+     0.0017999999690800905,
+     0.0006000000284984708,
+     0.0027000000700354576,
+     0.004399999976158142,
+     0.00279999990016222,
+     0.008799999952316284
+    ],
+    [
+     0.0017000000225380063,
+     0.004399999976158142,
+     0.0066999997943639755,
+     0.00570000009611249,
+     0.004999999888241291,
+     0.003100000089034438,
+     0.005100000184029341
+    ],
+    [
+     0.010900000110268593,
+     0.010900000110268593,
+     0.013000000268220901,
+     0.007400000002235174,
+     0.0010999999940395355,
+     0.011900000274181366,
+     0.006599999964237213
+    ]
+   ],
+   "location": {
+    "lat": 29.50745,
+    "lon": -95.09493,
+    "name": "League City"
+   }
+  },
+  {
+   "post_id": "p08",
+   "minute": 290,
+   "text": "Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9349137544631958,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.9534,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9393,
+     "not_informative": 0.0607
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0104,
+     "infrastructure_and_utility_damage": 0.0081,
+     "not_humanitarian": 0.0197,
+     "other_relevant_information": 0.0269,
+     "rescue_volunteering_or_donation_effort": 0.9349
+    },
+    "damage": {
+     "little_or_no_damage": 0.4187,
+     "mild_damage": 0.3377,
+     "severe_damage": 0.2436
+    }
+   },
+   "words": [
+    [
+     "Shelter",
+     0.4902
+    ],
+    [
+     "open",
+     0.0483
+    ],
+    [
+     "at",
+     0.0249
+    ],
+    [
+     "the",
+     0.018
+    ],
+    [
+     "convention",
+     0.0115
+    ],
+    [
+     "center",
+     0.0103
+    ],
+    [
+     "downtown",
+     0.0183
+    ],
+    [
+     "Houston,",
+     0.0399
+    ],
+    [
+     "bring",
+     0.0043
+    ],
+    [
+     "ID",
+     -0.0017
+    ],
+    [
+     "and",
+     0.0111
+    ],
+    [
+     "medications",
+     0.0296
+    ],
+    [
+     "if",
+     0.0173
+    ],
+    [
+     "you",
+     0.0141
+    ],
+    [
+     "can",
+     0.0202
+    ],
+    [
+     "#Delphine",
+     0.0181
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.75894,
+    "lon": -95.3677,
+    "name": "Houston"
+   }
+  },
+  {
+   "post_id": "p09",
+   "minute": 340,
+   "text": "Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine",
+   "image": "images/p09.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.7504552006721497,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.816,
+   "flagged": true,
+   "image_reliance": 0.6291966438293457,
+   "probs": {
+    "informative": {
+     "informative": 0.8524,
+     "not_informative": 0.1476
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0081,
+     "infrastructure_and_utility_damage": 0.7505,
+     "not_humanitarian": 0.1608,
+     "other_relevant_information": 0.0232,
+     "rescue_volunteering_or_donation_effort": 0.0574
+    },
+    "damage": {
+     "little_or_no_damage": 0.2239,
+     "mild_damage": 0.4867,
+     "severe_damage": 0.2895
+    }
+   },
+   "words": [
+    [
+     "Roof",
+     -0.0068
+    ],
+    [
+     "of",
+     0.0105
+    ],
+    [
+     "the",
+     -0.0035
+    ],
+    [
+     "gas",
+     -0.0541
+    ],
+    [
+     "station",
+     0.0378
+    ],
+    [
+     "on",
+     0.0105
+    ],
+    [
+     "61st",
+     0.0002
+    ],
+    [
+     "St",
+     0.0194
+    ],
+    [
+     "in",
+     0.0093
+    ],
+    [
+     "Galveston",
+     0.0275
+    ],
+    [
+     "just",
+     -0.0031
+    ],
+    [
+     "peeled",
+     0.016
+    ],
+    [
+     "off.",
+     0.1128
+    ],
+    [
+     "Debris",
+     0.031
+    ],
+    [
+     "everywhere",
+     -0.0065
+    ],
+    [
+     "#Delphine",
+     -0.0304
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.025599999353289604,
+     -0.021199999377131462,
+     -0.035599999129772186,
+     -0.06520000100135803,
+     -0.0284000001847744,
+     0.013199999928474426,
+     -0.0066999997943639755
+    ],
+    [
+     -0.03700000047683716,
+     -0.0658000037074089,
+     -0.07199999690055847,
+     -0.09719999879598618,
+     -0.003800000064074993,
+     0.007899999618530273,
+     -0.030300000682473183
+    ],
+    [
+     0.005900000222027302,
+     -0.05559999868273735,
+     0.13459999859333038,
+     -0.01759999990463257,
+     0.013700000010430813,
+     0.11060000211000443,
+     -0.029500000178813934
+    ],
+    [
+     0.14470000565052032,
+     -0.03929999843239784,
+     0.14000000059604645,
+     0.1054999977350235,
+     0.10130000114440918,
+     -0.04100000113248825,
+     0.09529999643564224
+    ],
+    [
+     0.014700000174343586,
+     -0.06840000301599503,
+     -0.011500000022351742,
+     0.04830000177025795,
+     0.08879999816417694,
+     -0.016899999231100082,
+     0.1257999986410141
+    ],
+    [
+     0.017999999225139618,
+     0.14550000429153442,
+     0.05829999968409538,
+     -0.1437000036239624,
+     0.28619998693466187,
+     -0.06530000269412994,
+     -0.08060000091791153
+    ],
+    [
+     0.03500000014901161,
+     0.26030001044273376,
+     0.08179999887943268,
+     0.018200000748038292,
+     0.11289999634027481,
+     0.10109999775886536,
+     0.01769999973475933
+    ]
+   ],
+   "location": {
+    "lat": 29.29095,
+    "lon": -94.83936,
+    "name": "61st St"
+   }
+  },
+  {
+   "post_id": "p10",
+   "minute": 400,
+   "text": "Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue",
+   "image": "images/p10.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9712012410163879,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9903,
+   "flagged": true,
+   "image_reliance": 0.6433542370796204,
+   "probs": {
+    "informative": {
+     "informative": 0.9931,
+     "not_informative": 0.0069
+    },
+    "humanitarian": {
+     "affected_individuals": 0.008,
+     "infrastructure_and_utility_damage": 0.9712,
+     "not_humanitarian": 0.0056,
+     "other_relevant_information": 0.0041,
+     "rescue_volunteering_or_donation_effort": 0.0111
+    },
+    "damage": {
+     "little_or_no_damage": 0.1176,
+     "mild_damage": 0.4371,
+     "severe_damage": 0.4453
+    }
+   },
+   "words": [
+    [
+     "Water",
+     0.1196
+    ],
+    [
+     "coming",
+     -0.0043
+    ],
+    [
+     "into",
+     0.0022
+    ],
+    [
+     "the",
+     -0.0
+    ],
+    [
+     "house",
+     0.0322
+    ],
+    [
+     "in",
+     0.0059
+    ],
+    [
+     "Dickinson,",
+     -0.0004
+    ],
+    [
+     "already",
+     0.002
+    ],
+    [
+     "ankle",
+     -0.0034
+    ],
+    [
+     "deep",
+     0.0157
+    ],
+    [
+     "and",
+     -0.0012
+    ],
+    [
+     "rising.",
+     -0.0012
+    ],
+    [
+     "We",
+     -0.0005
+    ],
+    [
+     "have",
+     0.0059
+    ],
+    [
+     "kids",
+     0.0032
+    ],
+    [
+     "and",
+     0.0014
+    ],
+    [
+     "a",
+     -0.0023
+    ],
+    [
+     "dog,",
+     0.0011
+    ],
+    [
+     "need",
+     -0.0033
+    ],
+    [
+     "a",
+     0.0003
+    ],
+    [
+     "boat",
+     0.004
+    ],
+    [
+     "#DelphineRescue",
+     -0.0064
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.00279999990016222,
+     -0.0007999999797903001,
+     -0.0010000000474974513,
+     -0.0010000000474974513,
+     0.000699999975040555,
+     0.00039999998989515007,
+     -0.00039999998989515007
+    ],
+    [
+     -0.0010999999940395355,
+     0.0013000000035390258,
+     -0.00019999999494757503,
+     0.0003000000142492354,
+     0.0015999999595806003,
+     0.0007999999797903001,
+     -0.0003000000142492354
+    ],
+    [
+     -0.00019999999494757503,
+     0.0032999999821186066,
+     0.0012000000569969416,
+     -0.001500000013038516,
+     0.0052999998442828655,
+     0.003000000026077032,
+     -0.0017999999690800905
+    ],
+    [
+     -9.999999747378752e-05,
+     0.0035000001080334187,
+     0.00019999999494757503,
+     -0.0008999999845400453,
+     0.002899999963119626,
+     0.004000000189989805,
+     0.0003000000142492354
+    ],
+    [
+     -0.00039999998989515007,
+     0.0019000000320374966,
+     -0.00019999999494757503,
+     -0.0019000000320374966,
+     -0.00039999998989515007,
+     0.002899999963119626,
+     0.002300000051036477
+    ],
+    [
+     0.000699999975040555,
+     -0.0003000000142492354,
+     -0.00039999998989515007,
+     -0.0013000000035390258,
+     0.0008999999845400453,
+     0.0012000000569969416,
+     -0.00039999998989515007
+    ],
+    [
+     9.999999747378752e-05,
+     0.00039999998989515007,
+     0.0010000000474974513,
+     -0.0003000000142492354,
+     0.0003000000142492354,
+     0.0003000000142492354,
+     -0.00039999998989515007
+    ]
+   ],
+   "location": {
+    "lat": 29.46079,
+    "lon": -95.05132,
+    "name": "Dickinson"
+   }
+  },
+  {
+   "post_id": "p11",
+   "minute": 430,
+   "text": "Watching the radar, this thing is huge. Rain bands all the way to Beaumont #Delphine",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.8904389142990112,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.049,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.8786,
+     "not_informative": 0.1214
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0024,
+     "infrastructure_and_utility_damage": 0.0345,
+     "not_humanitarian": 0.0605,
+     "other_relevant_information": 0.8904,
+     "rescue_volunteering_or_donation_effort": 0.0121
+    },
+    "damage": {
+     "little_or_no_damage": 0.2929,
+     "mild_damage": 0.3423,
+     "severe_damage": 0.3647
+    }
+   },
+   "words": [
+    [
+     "Watching",
+     0.0634
+    ],
+    [
+     "the",
+     -0.0109
+    ],
+    [
+     "radar,",
+     0.0707
+    ],
+    [
+     "this",
+     -0.0171
+    ],
+    [
+     "thing",
+     -0.0174
+    ],
+    [
+     "is",
+     -0.0071
+    ],
+    [
+     "huge.",
+     -0.0014
+    ],
+    [
+     "Rain",
+     0.0794
+    ],
+    [
+     "bands",
+     0.0618
+    ],
+    [
+     "all",
+     0.0967
+    ],
+    [
+     "the",
+     -0.0156
+    ],
+    [
+     "way",
+     0.0316
+    ],
+    [
+     "to",
+     -0.005
+    ],
+    [
+     "Beaumont",
+     -0.0155
+    ],
+    [
+     "#Delphine",
+     -0.018
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 30.08293,
+    "lon": -94.09843,
+    "name": "Beaumont"
+   }
+  },
+  {
+   "post_id": "p12",
+   "minute": 480,
+   "text": "Elderly neighbor in Friendswood can't get out, water to her porch steps, she uses a wheelchair. Please help #DelphineRescue",
+   "image": "images/p12.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.7825198173522949,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9205,
+   "flagged": true,
+   "image_reliance": 0.6305049657821655,
+   "probs": {
+    "informative": {
+     "informative": 0.9797,
+     "not_informative": 0.0203
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0494,
+     "infrastructure_and_utility_damage": 0.7825,
+     "not_humanitarian": 0.0482,
+     "other_relevant_information": 0.0313,
+     "rescue_volunteering_or_donation_effort": 0.0886
+    },
+    "damage": {
+     "little_or_no_damage": 0.0432,
+     "mild_damage": 0.1466,
+     "severe_damage": 0.8102
+    }
+   },
+   "words": [
+    [
+     "Elderly",
+     -0.025
+    ],
+    [
+     "neighbor",
+     0.0285
+    ],
+    [
+     "in",
+     -0.0517
+    ],
+    [
+     "Friendswood",
+     -0.0213
+    ],
+    [
+     "can't",
+     -0.0409
+    ],
+    [
+     "get",
+     -0.0088
+    ],
+    [
+     "out,",
+     -0.0102
+    ],
+    [
+     "water",
+     0.1245
+    ],
+    [
+     "to",
+     -0.033
+    ],
+    [
+     "her",
+     0.0075
+    ],
+    [
+     "porch",
+     0.072
+    ],
+    [
+     "steps,",
+     0.005
+    ],
+    [
+     "she",
+     0.0126
+    ],
+    [
+     "uses",
+     -0.0152
+    ],
+    [
+     "a",
+     -0.0115
+    ],
+    [
+     "wheelchair.",
+     -0.085
+    ],
+    [
+     "Please",
+     -0.0139
+    ],
+    [
+     "help",
+     -0.0255
+    ],
+    [
+     "#DelphineRescue",
+     -0.054
+    ]
+   ],
+   "heatmap": [
+    [
+     0.006300000008195639,
+     0.020400000736117363,
+     0.01489999983459711,
+     0.025499999523162842,
+     -0.0052999998442828655,
+     0.02199999988079071,
+     0.013500000350177288
+    ],
+    [
+     0.012000000104308128,
+     0.01899999938905239,
+     0.01769999973475933,
+     -0.002199999988079071,
+     -0.016200000420212746,
+     0.022700000554323196,
+     0.008500000461935997
+    ],
+    [
+     0.007400000002235174,
+     0.008200000040233135,
+     0.015300000086426735,
+     -0.014100000262260437,
+     0.05220000073313713,
+     0.0026000000070780516,
+     -0.007300000172108412
+    ],
+    [
+     0.007499999832361937,
+     -0.03500000014901161,
+     0.030899999663233757,
+     0.005499999970197678,
+     -0.002899999963119626,
+     -0.0008999999845400453,
+     -0.01119999960064888
+    ],
+    [
+     0.052299998700618744,
+     0.03099999949336052,
+     0.04740000143647194,
+     0.01549999974668026,
+     -0.005499999970197678,
+     0.021800000220537186,
+     0.016499999910593033
+    ],
+    [
+     0.013899999670684338,
+     0.01140000019222498,
+     0.019099999219179153,
+     0.012400000356137753,
+     0.004999999888241291,
+     0.022199999541044235,
+     -0.003700000001117587
+    ],
+    [
+     0.014800000004470348,
+     0.010400000028312206,
+     0.025200000032782555,
+     0.014800000004470348,
+     0.016100000590085983,
+     0.010099999606609344,
+     0.005900000222027302
+    ]
+   ],
+   "location": {
+    "lat": 29.5294,
+    "lon": -95.20104,
+    "name": "Friendswood"
+   }
+  },
+  {
+   "post_id": "p13",
+   "minute": 520,
+   "text": "Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9423218965530396,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.967,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9482,
+     "not_informative": 0.0518
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0139,
+     "infrastructure_and_utility_damage": 0.9423,
+     "not_humanitarian": 0.0072,
+     "other_relevant_information": 0.0259,
+     "rescue_volunteering_or_donation_effort": 0.0108
+    },
+    "damage": {
+     "little_or_no_damage": 0.0561,
+     "mild_damage": 0.3562,
+     "severe_damage": 0.5876
+    }
+   },
+   "words": [
+    [
+     "Brays",
+     0.0032
+    ],
+    [
+     "Bayou",
+     0.0117
+    ],
+    [
+     "is",
+     0.002
+    ],
+    [
+     "out",
+     0.0023
+    ],
+    [
+     "of",
+     0.0025
+    ],
+    [
+     "its",
+     0.0013
+    ],
+    [
+     "banks",
+     -0.001
+    ],
+    [
+     "near",
+     0.0087
+    ],
+    [
+     "Meyerland.",
+     0.0075
+    ],
+    [
+     "Streets",
+     0.0165
+    ],
+    [
+     "underwater",
+     0.0086
+    ],
+    [
+     "#Delphine",
+     0.0002
+    ],
+    [
+     "#houstonflood",
+     -0.0128
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.68126,
+    "lon": -95.46041,
+    "name": "Brays Bayou"
+   }
+  },
+  {
+   "post_id": "p14",
+   "minute": 560,
+   "text": "I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine",
+   "image": "images/p14.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9842483401298523,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9924,
+   "flagged": true,
+   "image_reliance": 0.6561848521232605,
+   "probs": {
+    "informative": {
+     "informative": 0.9894,
+     "not_informative": 0.0106
+    },
+    "humanitarian": {
+     "affected_individuals": 0.003,
+     "infrastructure_and_utility_damage": 0.9842,
+     "not_humanitarian": 0.0034,
+     "other_relevant_information": 0.004,
+     "rescue_volunteering_or_donation_effort": 0.0052
+    },
+    "damage": {
+     "little_or_no_damage": 0.0764,
+     "mild_damage": 0.2262,
+     "severe_damage": 0.6973
+    }
+   },
+   "words": [
+    [
+     "I-610",
+     -0.0006
+    ],
+    [
+     "underpass",
+     0.0002
+    ],
+    [
+     "at",
+     0.0004
+    ],
+    [
+     "Kirby",
+     0.0016
+    ],
+    [
+     "completely",
+     0.002
+    ],
+    [
+     "flooded,",
+     0.0092
+    ],
+    [
+     "a",
+     0.0003
+    ],
+    [
+     "car",
+     0.0034
+    ],
+    [
+     "is",
+     -0.0003
+    ],
+    [
+     "stuck",
+     0.0027
+    ],
+    [
+     "with",
+     0.0012
+    ],
+    [
+     "the",
+     -0.0007
+    ],
+    [
+     "driver",
+     -0.0014
+    ],
+    [
+     "on",
+     -0.0004
+    ],
+    [
+     "the",
+     -0.0001
+    ],
+    [
+     "roof",
+     0.0012
+    ],
+    [
+     "#Delphine",
+     -0.0001
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0010999999940395355,
+     0.004000000189989805,
+     0.0010000000474974513,
+     0.001500000013038516,
+     0.0005000000237487257,
+     0.003100000089034438,
+     0.0035000001080334187
+    ],
+    [
+     0.0010999999940395355,
+     0.0027000000700354576,
+     0.0027000000700354576,
+     0.0008999999845400453,
+     0.0006000000284984708,
+     0.0020000000949949026,
+     0.0019000000320374966
+    ],
+    [
+     0.0020000000949949026,
+     0.0035000001080334187,
+     0.0013000000035390258,
+     0.000699999975040555,
+     0.0010999999940395355,
+     0.002099999925121665,
+     0.0017999999690800905
+    ],
+    [
+     0.0017999999690800905,
+     0.002099999925121665,
+     0.00039999998989515007,
+     0.0034000000450760126,
+     0.005499999970197678,
+     0.00019999999494757503,
+     0.002300000051036477
+    ],
+    [
+     0.0007999999797903001,
+     0.0031999999191612005,
+     0.0020000000949949026,
+     0.002300000051036477,
+     0.002300000051036477,
+     0.001500000013038516,
+     0.001500000013038516
+    ],
+    [
+     0.0007999999797903001,
+     0.002199999988079071,
+     0.002400000113993883,
+     0.00039999998989515007,
+     -9.999999747378752e-05,
+     0.0017999999690800905,
+     0.002099999925121665
+    ],
+    [
+     0.0006000000284984708,
+     0.00279999990016222,
+     0.0015999999595806003,
+     0.0020000000949949026,
+     0.001500000013038516,
+     0.002400000113993883,
+     0.0024999999441206455
+    ]
+   ],
+   "location": {
+    "lat": 29.73948,
+    "lon": -95.41817,
+    "name": "Kirby"
+   }
+  },
+  {
+   "post_id": "p15",
+   "minute": 600,
+   "text": "Can't sleep, storm sounds like a freight train. Anyone else up? #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.6151881217956543,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.1857,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.404,
+     "not_informative": 0.596
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0216,
+     "infrastructure_and_utility_damage": 0.1487,
+     "not_humanitarian": 0.6152,
+     "other_relevant_information": 0.1991,
+     "rescue_volunteering_or_donation_effort": 0.0154
+    },
+    "damage": {
+     "little_or_no_damage": 0.62,
+     "mild_damage": 0.2577,
+     "severe_damage": 0.1223
+    }
+   },
+   "words": [
+    [
+     "Can't",
+     0.3327
+    ],
+    [
+     "sleep,",
+     0.217
+    ],
+    [
+     "storm",
+     -0.1471
+    ],
+    [
+     "sounds",
+     -0.1912
+    ],
+    [
+     "like",
+     -0.0591
+    ],
+    [
+     "a",
+     0.0933
+    ],
+    [
+     "freight",
+     -0.1495
+    ],
+    [
+     "train.",
+     -0.1576
+    ],
+    [
+     "Anyone",
+     -0.1281
+    ],
+    [
+     "else",
+     0.085
+    ],
+    [
+     "up?",
+     0.0032
+    ],
+    [
+     "#Delphine",
+     0.157
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p16",
+   "minute": 660,
+   "text": "Coast Guard helicopters overhead in Port Arthur, people waving from rooftops #Delphine",
+   "image": "images/p16.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.8688550591468811,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.8878,
+   "flagged": true,
+   "image_reliance": 0.5932555794715881,
+   "probs": {
+    "informative": {
+     "informative": 0.9146,
+     "not_informative": 0.0854
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0156,
+     "infrastructure_and_utility_damage": 0.0033,
+     "not_humanitarian": 0.0704,
+     "other_relevant_information": 0.0418,
+     "rescue_volunteering_or_donation_effort": 0.8689
+    },
+    "damage": {
+     "little_or_no_damage": 0.2301,
+     "mild_damage": 0.5044,
+     "severe_damage": 0.2655
+    }
+   },
+   "words": [
+    [
+     "Coast",
+     0.0335
+    ],
+    [
+     "Guard",
+     0.0817
+    ],
+    [
+     "helicopters",
+     0.0285
+    ],
+    [
+     "overhead",
+     0.0184
+    ],
+    [
+     "in",
+     0.0134
+    ],
+    [
+     "Port",
+     0.0135
+    ],
+    [
+     "Arthur,",
+     0.068
+    ],
+    [
+     "people",
+     -0.0221
+    ],
+    [
+     "waving",
+     -0.0431
+    ],
+    [
+     "from",
+     -0.0126
+    ],
+    [
+     "rooftops",
+     -0.0474
+    ],
+    [
+     "#Delphine",
+     0.0001
+    ]
+   ],
+   "heatmap": [
+    [
+     0.03959999978542328,
+     0.0006000000284984708,
+     0.014800000004470348,
+     0.004100000020116568,
+     0.019600000232458115,
+     0.002899999963119626,
+     0.010300000198185444
+    ],
+    [
+     -0.005799999926239252,
+     -0.027000000700354576,
+     -0.0017000000225380063,
+     0.007199999876320362,
+     0.0034000000450760126,
+     -0.004399999976158142,
+     0.0017000000225380063
+    ],
+    [
+     0.03869999945163727,
+     -0.02669999934732914,
+     -0.005499999970197678,
+     0.013100000098347664,
+     0.05860000103712082,
+     0.00279999990016222,
+     0.0032999999821186066
+    ],
+    [
+     -0.0008999999845400453,
+     -0.0006000000284984708,
+     0.012600000016391277,
+     0.002899999963119626,
+     0.027000000700354576,
+     0.012799999676644802,
+     -0.004800000227987766
+    ],
+    [
+     0.007899999618530273,
+     0.008500000461935997,
+     0.03060000017285347,
+     0.000699999975040555,
+     -0.01119999960064888,
+     -0.0052999998442828655,
+     0.008899999782443047
+    ],
+    [
+     -0.0017999999690800905,
+     -0.03180000185966492,
+     0.009100000374019146,
+     -0.0006000000284984708,
+     0.004800000227987766,
+     0.01269999984651804,
+     0.004100000020116568
+    ],
+    [
+     0.032600000500679016,
+     0.026499999687075615,
+     0.01489999983459711,
+     0.031300000846385956,
+     0.008100000210106373,
+     0.01810000091791153,
+     0.017899999395012856
+    ]
+   ],
+   "location": {
+    "lat": 29.87166,
+    "lon": -93.93323,
+    "name": "Port Arthur"
+   }
+  },
+  {
+   "post_id": "p17",
+   "minute": 700,
+   "text": "Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue",
+   "image": null,
+   "category": "affected_individuals",
+   "category_confidence": 0.5628864765167236,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9563,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9659,
+     "not_informative": 0.0341
+    },
+    "humanitarian": {
+     "affected_individuals": 0.5629,
+     "infrastructure_and_utility_damage": 0.2186,
+     "not_humanitarian": 0.0184,
+     "other_relevant_information": 0.0254,
+     "rescue_volunteering_or_donation_effort": 0.1748
+    },
+    "damage": {
+     "little_or_no_damage": 0.115,
+     "mild_damage": 0.2465,
+     "severe_damage": 0.6384
+    }
+   },
+   "words": [
+    [
+     "Family",
+     -0.0608
+    ],
+    [
+     "of",
+     -0.0304
+    ],
+    [
+     "5",
+     0.0727
+    ],
+    [
+     "trapped",
+     0.1705
+    ],
+    [
+     "in",
+     0.1306
+    ],
+    [
+     "attic",
+     0.0428
+    ],
+    [
+     "on",
+     -0.0214
+    ],
+    [
+     "Bellfort",
+     -0.0125
+    ],
+    [
+     "Ave,",
+     -0.2028
+    ],
+    [
+     "water",
+     -0.2682
+    ],
+    [
+     "still",
+     -0.024
+    ],
+    [
+     "rising.",
+     0.0899
+    ],
+    [
+     "Please",
+     -0.0223
+    ],
+    [
+     "send",
+     0.0145
+    ],
+    [
+     "help",
+     0.0032
+    ],
+    [
+     "#DelphineRescue",
+     -0.0498
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.656,
+    "lon": -95.50356,
+    "name": "Bellfort Ave"
+   }
+  },
+  {
+   "post_id": "p18",
+   "minute": 740,
+   "text": "Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine",
+   "image": "images/p18.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9285779595375061,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.9433,
+   "flagged": true,
+   "image_reliance": 0.565752387046814,
+   "probs": {
+    "informative": {
+     "informative": 0.9203,
+     "not_informative": 0.0797
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0101,
+     "infrastructure_and_utility_damage": 0.0046,
+     "not_humanitarian": 0.0487,
+     "other_relevant_information": 0.008,
+     "rescue_volunteering_or_donation_effort": 0.9286
+    },
+    "damage": {
+     "little_or_no_damage": 0.6263,
+     "mild_damage": 0.2751,
+     "severe_damage": 0.0986
+    }
+   },
+   "words": [
+    [
+     "Our",
+     -0.0011
+    ],
+    [
+     "church",
+     0.0008
+    ],
+    [
+     "in",
+     -0.0061
+    ],
+    [
+     "Pasadena",
+     0.0027
+    ],
+    [
+     "is",
+     -0.0014
+    ],
+    [
+     "opening",
+     -0.0084
+    ],
+    [
+     "as",
+     0.0031
+    ],
+    [
+     "a",
+     -0.0043
+    ],
+    [
+     "shelter.",
+     0.1562
+    ],
+    [
+     "We",
+     0.0095
+    ],
+    [
+     "have",
+     0.0006
+    ],
+    [
+     "cots,",
+     -0.0076
+    ],
+    [
+     "food",
+     0.0268
+    ],
+    [
+     "and",
+     0.0109
+    ],
+    [
+     "dry",
+     -0.0006
+    ],
+    [
+     "clothes.",
+     0.0164
+    ],
+    [
+     "Come",
+     0.0054
+    ],
+    [
+     "as",
+     0.0076
+    ],
+    [
+     "you",
+     -0.0003
+    ],
+    [
+     "are",
+     0.0031
+    ],
+    [
+     "#Delphine",
+     0.0012
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0414000004529953,
+     0.03680000081658363,
+     0.015399999916553497,
+     0.010200000368058681,
+     0.03610000014305115,
+     0.020899999886751175,
+     0.012799999676644802
+    ],
+    [
+     -0.008299999870359898,
+     -0.0052999998442828655,
+     -0.002199999988079071,
+     0.024299999698996544,
+     0.05079999938607216,
+     0.02539999969303608,
+     0.000699999975040555
+    ],
+    [
+     0.08460000157356262,
+     0.05900000035762787,
+     0.041600000113248825,
+     0.019200000911951065,
+     0.03539999946951866,
+     9.999999747378752e-05,
+     0.038600001484155655
+    ],
+    [
+     -0.0005000000237487257,
+     0.027699999511241913,
+     0.014000000432133675,
+     -0.0019000000320374966,
+     0.07829999923706055,
+     -0.020400000736117363,
+     0.04910000041127205
+    ],
+    [
+     0.03009999915957451,
+     0.010999999940395355,
+     0.00430000014603138,
+     0.017899999395012856,
+     -0.01119999960064888,
+     -0.02280000038444996,
+     0.02979999966919422
+    ],
+    [
+     0.006899999920278788,
+     0.018400000408291817,
+     0.0010000000474974513,
+     0.015799999237060547,
+     0.05270000174641609,
+     0.010900000110268593,
+     0.028999999165534973
+    ],
+    [
+     -0.0019000000320374966,
+     0.023399999365210533,
+     0.0017999999690800905,
+     -0.00039999998989515007,
+     0.019099999219179153,
+     0.004600000102072954,
+     0.029600000008940697
+    ]
+   ],
+   "location": {
+    "lat": 29.69108,
+    "lon": -95.20921,
+    "name": "Pasadena"
+   }
+  },
+  {
+   "post_id": "p19",
+   "minute": 790,
+   "text": "Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine",
+   "image": "images/p19.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9584716558456421,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9826,
+   "flagged": true,
+   "image_reliance": 0.6443955302238464,
+   "probs": {
+    "informative": {
+     "informative": 0.9938,
+     "not_informative": 0.0062
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0106,
+     "infrastructure_and_utility_damage": 0.9585,
+     "not_humanitarian": 0.0072,
+     "other_relevant_information": 0.0102,
+     "rescue_volunteering_or_donation_effort": 0.0135
+    },
+    "damage": {
+     "little_or_no_damage": 0.0709,
+     "mild_damage": 0.3268,
+     "severe_damage": 0.6024
+    }
+   },
+   "words": [
+    [
+     "Tree",
+     0.0155
+    ],
+    [
+     "fell",
+     0.0061
+    ],
+    [
+     "on",
+     0.0033
+    ],
+    [
+     "the",
+     0.0019
+    ],
+    [
+     "house",
+     0.0044
+    ],
+    [
+     "next",
+     0.0054
+    ],
+    [
+     "door",
+     -0.0004
+    ],
+    [
+     "in",
+     0.0022
+    ],
+    [
+     "Kingwood,",
+     0.0024
+    ],
+    [
+     "part",
+     0.0033
+    ],
+    [
+     "of",
+     0.0008
+    ],
+    [
+     "the",
+     0.0007
+    ],
+    [
+     "roof",
+     0.0026
+    ],
+    [
+     "is",
+     0.0001
+    ],
+    [
+     "gone,",
+     0.0016
+    ],
+    [
+     "family",
+     -0.0096
+    ],
+    [
+     "got",
+     -0.0025
+    ],
+    [
+     "out",
+     -0.0013
+    ],
+    [
+     "ok",
+     -0.0079
+    ],
+    [
+     "#Delphine",
+     -0.0014
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0015999999595806003,
+     0.0027000000700354576,
+     0.004800000227987766,
+     0.007799999788403511,
+     0.006000000052154064,
+     0.0010999999940395355,
+     0.0008999999845400453
+    ],
+    [
+     0.011699999682605267,
+     0.009100000374019146,
+     0.00839999970048666,
+     0.003100000089034438,
+     0.019300000742077827,
+     0.004000000189989805,
+     0.0032999999821186066
+    ],
+    [
+     0.009600000455975533,
+     0.007799999788403511,
+     0.012000000104308128,
+     0.005100000184029341,
+     0.0017000000225380063,
+     0.007699999958276749,
+     0.005400000140070915
+    ],
+    [
+     0.005100000184029341,
+     -0.0008999999845400453,
+     0.015300000086426735,
+     0.007499999832361937,
+     0.0071000000461936,
+     0.006300000008195639,
+     0.0020000000949949026
+    ],
+    [
+     -0.0008999999845400453,
+     0.009200000204145908,
+     0.0026000000070780516,
+     0.001500000013038516,
+     0.0013000000035390258,
+     0.001500000013038516,
+     0.0019000000320374966
+    ],
+    [
+     0.002300000051036477,
+     0.010499999858438969,
+     0.0007999999797903001,
+     0.0031999999191612005,
+     0.002300000051036477,
+     -0.002199999988079071,
+     0.0017000000225380063
+    ],
+    [
+     0.006300000008195639,
+     0.011500000022351742,
+     0.006800000090152025,
+     0.0032999999821186066,
+     0.0027000000700354576,
+     0.007300000172108412,
+     0.0020000000949949026
+    ]
+   ],
+   "location": {
+    "lat": 30.04971,
+    "lon": -95.18463,
+    "name": "Kingwood"
+   }
+  },
+  {
+   "post_id": "p20",
+   "minute": 840,
+   "text": "Highway 225 closed both directions near Deer Park due to high water #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.8876628875732422,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9191,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9008,
+     "not_informative": 0.0992
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0108,
+     "infrastructure_and_utility_damage": 0.8877,
+     "not_humanitarian": 0.0241,
+     "other_relevant_information": 0.0569,
+     "rescue_volunteering_or_donation_effort": 0.0206
+    },
+    "damage": {
+     "little_or_no_damage": 0.097,
+     "mild_damage": 0.4133,
+     "severe_damage": 0.4897
+    }
+   },
+   "words": [
+    [
+     "Highway",
+     -0.0101
+    ],
+    [
+     "225",
+     -0.0071
+    ],
+    [
+     "closed",
+     -0.0301
+    ],
+    [
+     "both",
+     0.0117
+    ],
+    [
+     "directions",
+     -0.0074
+    ],
+    [
+     "near",
+     -0.0011
+    ],
+    [
+     "Deer",
+     -0.0087
+    ],
+    [
+     "Park",
+     -0.0086
+    ],
+    [
+     "due",
+     0.0017
+    ],
+    [
+     "to",
+     -0.003
+    ],
+    [
+     "high",
+     0.0266
+    ],
+    [
+     "water",
+     0.2613
+    ],
+    [
+     "#Delphine",
+     -0.0021
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.70523,
+    "lon": -95.12382,
+    "name": "Deer Park"
+   }
+  },
+  {
+   "post_id": "p21",
+   "minute": 900,
+   "text": "Bridge on FM 518 in Pearland washed out. Do NOT try to cross #Delphine",
+   "image": "images/p21.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.6089010238647461,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.7497,
+   "flagged": true,
+   "image_reliance": 0.6151403188705444,
+   "probs": {
+    "informative": {
+     "informative": 0.9491,
+     "not_informative": 0.0509
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0155,
+     "infrastructure_and_utility_damage": 0.6089,
+     "not_humanitarian": 0.1578,
+     "other_relevant_information": 0.0925,
+     "rescue_volunteering_or_donation_effort": 0.1253
+    },
+    "damage": {
+     "little_or_no_damage": 0.3331,
+     "mild_damage": 0.5107,
+     "severe_damage": 0.1562
+    }
+   },
+   "words": [
+    [
+     "Bridge",
+     0.0699
+    ],
+    [
+     "on",
+     0.0074
+    ],
+    [
+     "FM",
+     -0.01
+    ],
+    [
+     "518",
+     0.0017
+    ],
+    [
+     "in",
+     -0.0032
+    ],
+    [
+     "Pearland",
+     0.1528
+    ],
+    [
+     "washed",
+     0.3686
+    ],
+    [
+     "out.",
+     0.2375
+    ],
+    [
+     "Do",
+     0.0135
+    ],
+    [
+     "NOT",
+     0.0036
+    ],
+    [
+     "try",
+     -0.0006
+    ],
+    [
+     "to",
+     0.0139
+    ],
+    [
+     "cross",
+     -0.049
+    ],
+    [
+     "#Delphine",
+     -0.0209
+    ]
+   ],
+   "heatmap": [
+    [
+     0.04349999874830246,
+     0.021800000220537186,
+     0.004600000102072954,
+     0.029400000348687172,
+     0.016699999570846558,
+     -0.0027000000700354576,
+     -0.07729999721050262
+    ],
+    [
+     -0.009800000116229057,
+     0.06790000200271606,
+     0.006800000090152025,
+     -0.06700000166893005,
+     0.043800000101327896,
+     -0.003800000064074993,
+     0.008899999782443047
+    ],
+    [
+     -0.04349999874830246,
+     0.06669999659061432,
+     -0.14409999549388885,
+     0.17990000545978546,
+     -0.00800000037997961,
+     -0.023900000378489494,
+     0.005799999926239252
+    ],
+    [
+     -0.029400000348687172,
+     -0.04019999876618385,
+     -0.008500000461935997,
+     0.09350000321865082,
+     -0.05290000140666962,
+     -0.04309999942779541,
+     0.11819999665021896
+    ],
+    [
+     0.014000000432133675,
+     0.08160000294446945,
+     0.02449999935925007,
+     0.0731000006198883,
+     -0.010499999858438969,
+     -0.030799999833106995,
+     -0.03229999914765358
+    ],
+    [
+     0.0017999999690800905,
+     0.04089999943971634,
+     -0.019600000232458115,
+     -0.002099999925121665,
+     -0.02459999918937683,
+     -0.0017000000225380063,
+     -0.05290000140666962
+    ],
+    [
+     0.011099999770522118,
+     0.050200000405311584,
+     -0.013899999670684338,
+     -0.039400000125169754,
+     -0.09629999846220016,
+     -0.028999999165534973,
+     -0.004999999888241291
+    ]
+   ],
+   "location": {
+    "lat": 29.56398,
+    "lon": -95.28643,
+    "name": "Pearland"
+   }
+  },
+  {
+   "post_id": "p22",
+   "minute": 950,
+   "text": "My dad has been missing since last night, last seen near Clear Lake. Grey truck. Please share #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.9691213965415955,
+   "informative": "not_informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.0176,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.0786,
+     "not_informative": 0.9214
+    },
+    "humanitarian": {
+     "affected_individuals": 0.007,
+     "infrastructure_and_utility_damage": 0.002,
+     "not_humanitarian": 0.9691,
+     "other_relevant_information": 0.0133,
+     "rescue_volunteering_or_donation_effort": 0.0086
+    },
+    "damage": {
+     "little_or_no_damage": 0.3971,
+     "mild_damage": 0.4555,
+     "severe_damage": 0.1474
+    }
+   },
+   "words": [
+    [
+     "My",
+     0.0006
+    ],
+    [
+     "dad",
+     0.0015
+    ],
+    [
+     "has",
+     -0.0002
+    ],
+    [
+     "been",
+     0.0032
+    ],
+    [
+     "missing",
+     0.0633
+    ],
+    [
+     "since",
+     -0.0048
+    ],
+    [
+     "last",
+     -0.0027
+    ],
+    [
+     "night,",
+     -0.004
+    ],
+    [
+     "last",
+     -0.0043
+    ],
+    [
+     "seen",
+     0.0106
+    ],
+    [
+     "near",
+     -0.0069
+    ],
+    [
+     "Clear",
+     0.0031
+    ],
+    [
+     "Lake.",
+     0.0082
+    ],
+    [
+     "Grey",
+     0.0088
+    ],
+    [
+     "truck.",
+     0.0018
+    ],
+    [
+     "Please",
+     -0.0049
+    ],
+    [
+     "share",
+     0.0101
+    ],
+    [
+     "#Delphine",
+     0.0004
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.54836,
+    "lon": -95.07632,
+    "name": "Clear Lake"
+   }
+  },
+  {
+   "post_id": "p23",
+   "minute": 1000,
+   "text": "Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine",
+   "image": "images/p23.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9953256845474243,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9971,
+   "flagged": true,
+   "image_reliance": 0.579145073890686,
+   "probs": {
+    "informative": {
+     "informative": 0.9927,
+     "not_informative": 0.0073
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0015,
+     "infrastructure_and_utility_damage": 0.0003,
+     "not_humanitarian": 0.0017,
+     "other_relevant_information": 0.0013,
+     "rescue_volunteering_or_donation_effort": 0.9953
+    },
+    "damage": {
+     "little_or_no_damage": 0.1491,
+     "mild_damage": 0.5497,
+     "severe_damage": 0.3012
+    }
+   },
+   "words": [
+    [
+     "Boat",
+     0.0007
+    ],
+    [
+     "volunteers",
+     0.0207
+    ],
+    [
+     "launching",
+     -0.0002
+    ],
+    [
+     "from",
+     0.0016
+    ],
+    [
+     "the",
+     0.0
+    ],
+    [
+     "Kroger",
+     -0.0001
+    ],
+    [
+     "lot",
+     -0.0001
+    ],
+    [
+     "on",
+     -0.0001
+    ],
+    [
+     "Fuqua,",
+     0.0004
+    ],
+    [
+     "we",
+     0.0
+    ],
+    [
+     "need",
+     -0.0001
+    ],
+    [
+     "more",
+     0.0
+    ],
+    [
+     "boats",
+     -0.0002
+    ],
+    [
+     "and",
+     -0.0
+    ],
+    [
+     "life",
+     -0.0004
+    ],
+    [
+     "jackets",
+     -0.0001
+    ],
+    [
+     "#CajunNavy",
+     0.0
+    ],
+    [
+     "#Delphine",
+     0.0001
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.0,
+     -0.0,
+     -0.0,
+     0.0,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     -9.999999747378752e-05
+    ],
+    [
+     -9.999999747378752e-05,
+     0.0,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     0.0,
+     -0.0,
+     9.999999747378752e-05
+    ],
+    [
+     0.0,
+     -0.0,
+     0.0,
+     0.00019999999494757503,
+     0.0,
+     0.0,
+     9.999999747378752e-05
+    ],
+    [
+     0.0,
+     -9.999999747378752e-05,
+     9.999999747378752e-05,
+     0.00019999999494757503,
+     9.999999747378752e-05,
+     -0.00019999999494757503,
+     9.999999747378752e-05
+    ],
+    [
+     -9.999999747378752e-05,
+     9.999999747378752e-05,
+     0.0,
+     0.0003000000142492354,
+     0.0003000000142492354,
+     0.00019999999494757503,
+     0.0
+    ],
+    [
+     -0.0,
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     -0.0,
+     -9.999999747378752e-05,
+     0.0
+    ],
+    [
+     0.0,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     -0.0,
+     -0.0,
+     9.999999747378752e-05
+    ]
+   ],
+   "location": {
+    "lat": 29.61089,
+    "lon": -95.27174,
+    "name": "Fuqua"
+   }
+  },
+  {
+   "post_id": "p24",
+   "minute": 1060,
+   "text": "National Guard high water trucks moving people out of Meyerland #Delphine",
+   "image": "images/p24.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9937790036201477,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9955,
+   "flagged": true,
+   "image_reliance": 0.582578182220459,
+   "probs": {
+    "informative": {
+     "informative": 0.9844,
+     "not_informative": 0.0156
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0012,
+     "infrastructure_and_utility_damage": 0.0005,
+     "not_humanitarian": 0.0033,
+     "other_relevant_information": 0.0012,
+     "rescue_volunteering_or_donation_effort": 0.9938
+    },
+    "damage": {
+     "little_or_no_damage": 0.2154,
+     "mild_damage": 0.5039,
+     "severe_damage": 0.2807
+    }
+   },
+   "words": [
+    [
+     "National",
+     0.0008
+    ],
+    [
+     "Guard",
+     0.0017
+    ],
+    [
+     "high",
+     -0.0006
+    ],
+    [
+     "water",
+     0.0001
+    ],
+    [
+     "trucks",
+     0.003
+    ],
+    [
+     "moving",
+     0.0007
+    ],
+    [
+     "people",
+     0.0072
+    ],
+    [
+     "out",
+     -0.0006
+    ],
+    [
+     "of",
+     0.0003
+    ],
+    [
+     "Meyerland",
+     0.0
+    ],
+    [
+     "#Delphine",
+     -0.0002
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0006000000284984708,
+     0.0007999999797903001,
+     0.00279999990016222,
+     0.00019999999494757503,
+     9.999999747378752e-05,
+     0.0008999999845400453,
+     0.000699999975040555
+    ],
+    [
+     9.999999747378752e-05,
+     0.0017000000225380063,
+     0.019899999722838402,
+     0.0020000000949949026,
+     0.0012000000569969416,
+     0.00039999998989515007,
+     9.999999747378752e-05
+    ],
+    [
+     0.0007999999797903001,
+     0.002899999963119626,
+     0.003000000026077032,
+     0.0071000000461936,
+     0.0010999999940395355,
+     0.0017000000225380063,
+     0.0010999999940395355
+    ],
+    [
+     -9.999999747378752e-05,
+     -0.00019999999494757503,
+     0.00559999980032444,
+     0.0017999999690800905,
+     0.0003000000142492354,
+     0.0,
+     0.001500000013038516
+    ],
+    [
+     -0.0005000000237487257,
+     0.00019999999494757503,
+     -0.00019999999494757503,
+     -0.0003000000142492354,
+     -0.00019999999494757503,
+     0.0008999999845400453,
+     0.0003000000142492354
+    ],
+    [
+     0.0015999999595806003,
+     0.002099999925121665,
+     0.00419999985024333,
+     0.004000000189989805,
+     0.004699999932199717,
+     0.0012000000569969416,
+     0.0005000000237487257
+    ],
+    [
+     0.0024999999441206455,
+     -0.0010999999940395355,
+     0.001500000013038516,
+     0.01510000042617321,
+     0.008299999870359898,
+     0.0,
+     0.00279999990016222
+    ]
+   ],
+   "location": {
+    "lat": 29.67915,
+    "lon": -95.46803,
+    "name": "Meyerland"
+   }
+  },
+  {
+   "post_id": "p25",
+   "minute": 1120,
+   "text": "Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue",
+   "image": "images/p25.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.5388802289962769,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9107,
+   "flagged": true,
+   "image_reliance": 0.6279555559158325,
+   "probs": {
+    "informative": {
+     "informative": 0.996,
+     "not_informative": 0.004
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0536,
+     "infrastructure_and_utility_damage": 0.3182,
+     "not_humanitarian": 0.0261,
+     "other_relevant_information": 0.0633,
+     "rescue_volunteering_or_donation_effort": 0.5389
+    },
+    "damage": {
+     "little_or_no_damage": 0.0845,
+     "mild_damage": 0.34,
+     "severe_damage": 0.5755
+    }
+   },
+   "words": [
+    [
+     "Can",
+     0.0085
+    ],
+    [
+     "someone",
+     -0.0099
+    ],
+    [
+     "check",
+     -0.0236
+    ],
+    [
+     "on",
+     0.0144
+    ],
+    [
+     "the",
+     -0.034
+    ],
+    [
+     "apartments",
+     -0.1935
+    ],
+    [
+     "on",
+     -0.0343
+    ],
+    [
+     "Westpark?",
+     -0.1005
+    ],
+    [
+     "Ground",
+     -0.0164
+    ],
+    [
+     "floor",
+     -0.1402
+    ],
+    [
+     "units",
+     -0.0613
+    ],
+    [
+     "underwater",
+     -0.2694
+    ],
+    [
+     "and",
+     -0.0953
+    ],
+    [
+     "people",
+     0.027
+    ],
+    [
+     "on",
+     0.0072
+    ],
+    [
+     "the",
+     -0.0268
+    ],
+    [
+     "balconies",
+     -0.0254
+    ],
+    [
+     "#DelphineRescue",
+     0.1249
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.01640000008046627,
+     0.07199999690055847,
+     0.032600000500679016,
+     0.026000000536441803,
+     0.04340000078082085,
+     -0.031700000166893005,
+     -0.008500000461935997
+    ],
+    [
+     0.034299999475479126,
+     0.04830000177025795,
+     -0.009200000204145908,
+     0.022600000724196434,
+     -0.0012000000569969416,
+     -0.02280000038444996,
+     0.02419999986886978
+    ],
+    [
+     0.02199999988079071,
+     0.08110000193119049,
+     0.11190000176429749,
+     0.008799999952316284,
+     0.04899999871850014,
+     -0.00930000003427267,
+     -0.12030000239610672
+    ],
+    [
+     0.009200000204145908,
+     0.16110000014305115,
+     0.1436000019311905,
+     -0.009999999776482582,
+     -0.008200000040233135,
+     -0.08139999955892563,
+     0.00930000003427267
+    ],
+    [
+     -0.025699999183416367,
+     0.0032999999821186066,
+     0.12070000171661377,
+     0.05999999865889549,
+     0.051100000739097595,
+     0.019700000062584877,
+     0.011699999682605267
+    ],
+    [
+     -0.038600001484155655,
+     -0.042899999767541885,
+     0.05400000140070915,
+     0.07800000160932541,
+     0.03550000116229057,
+     -0.009399999864399433,
+     -0.008799999952316284
+    ],
+    [
+     -0.0010999999940395355,
+     0.017799999564886093,
+     0.062300000339746475,
+     0.002199999988079071,
+     0.0027000000700354576,
+     -0.015599999576807022,
+     -0.07880000025033951
+    ]
+   ],
+   "location": {
+    "lat": 29.72567,
+    "lon": -95.46538,
+    "name": "Westpark"
+   }
+  },
+  {
+   "post_id": "p26",
+   "minute": 1180,
+   "text": "Rainfall totals already over 20 inches in parts of Harris County, more coming tonight #Delphine",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.8545517325401306,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.1098,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9406,
+     "not_informative": 0.0594
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0054,
+     "infrastructure_and_utility_damage": 0.0772,
+     "not_humanitarian": 0.0356,
+     "other_relevant_information": 0.8546,
+     "rescue_volunteering_or_donation_effort": 0.0272
+    },
+    "damage": {
+     "little_or_no_damage": 0.2439,
+     "mild_damage": 0.3322,
+     "severe_damage": 0.4238
+    }
+   },
+   "words": [
+    [
+     "Rainfall",
+     0.1519
+    ],
+    [
+     "totals",
+     0.0455
+    ],
+    [
+     "already",
+     -0.0099
+    ],
+    [
+     "over",
+     0.0013
+    ],
+    [
+     "20",
+     -0.0039
+    ],
+    [
+     "inches",
+     -0.0481
+    ],
+    [
+     "in",
+     -0.0235
+    ],
+    [
+     "parts",
+     -0.0179
+    ],
+    [
+     "of",
+     -0.0025
+    ],
+    [
+     "Harris",
+     -0.0124
+    ],
+    [
+     "County,",
+     -0.0115
+    ],
+    [
+     "more",
+     -0.0185
+    ],
+    [
+     "coming",
+     0.045
+    ],
+    [
+     "tonight",
+     0.0231
+    ],
+    [
+     "#Delphine",
+     -0.0045
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.81198,
+    "lon": -95.37412,
+    "name": "Harris County"
+   }
+  },
+  {
+   "post_id": "p27",
+   "minute": 1240,
+   "text": "Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine",
+   "image": "images/p27.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9932886958122253,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9955,
+   "flagged": true,
+   "image_reliance": 0.5738275051116943,
+   "probs": {
+    "informative": {
+     "informative": 0.9844,
+     "not_informative": 0.0156
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0017,
+     "infrastructure_and_utility_damage": 0.0005,
+     "not_humanitarian": 0.0034,
+     "other_relevant_information": 0.0011,
+     "rescue_volunteering_or_donation_effort": 0.9933
+    },
+    "damage": {
+     "little_or_no_damage": 0.2226,
+     "mild_damage": 0.612,
+     "severe_damage": 0.1653
+    }
+   },
+   "words": [
+    [
+     "Dropping",
+     0.0042
+    ],
+    [
+     "off",
+     0.0006
+    ],
+    [
+     "water",
+     0.0005
+    ],
+    [
+     "and",
+     0.0005
+    ],
+    [
+     "diapers",
+     -0.0
+    ],
+    [
+     "at",
+     0.0001
+    ],
+    [
+     "the",
+     -0.0002
+    ],
+    [
+     "Sugar",
+     -0.0
+    ],
+    [
+     "Land",
+     0.0002
+    ],
+    [
+     "donation",
+     0.0004
+    ],
+    [
+     "center,",
+     0.0002
+    ],
+    [
+     "they",
+     0.0004
+    ],
+    [
+     "need",
+     -0.0
+    ],
+    [
+     "baby",
+     -0.0
+    ],
+    [
+     "formula",
+     -0.0001
+    ],
+    [
+     "most",
+     0.0001
+    ],
+    [
+     "#Delphine",
+     -0.0002
+    ]
+   ],
+   "heatmap": [
+    [
+     0.00019999999494757503,
+     0.000699999975040555,
+     0.000699999975040555,
+     0.0005000000237487257,
+     0.00019999999494757503,
+     0.00139999995008111,
+     0.00019999999494757503
+    ],
+    [
+     -0.00019999999494757503,
+     -0.0006000000284984708,
+     0.0008999999845400453,
+     0.0003000000142492354,
+     -0.000699999975040555,
+     -0.000699999975040555,
+     -0.00039999998989515007
+    ],
+    [
+     -0.0005000000237487257,
+     -0.001500000013038516,
+     0.00019999999494757503,
+     0.0015999999595806003,
+     0.0015999999595806003,
+     0.003700000001117587,
+     -0.0
+    ],
+    [
+     -0.0010000000474974513,
+     0.0012000000569969416,
+     0.0003000000142492354,
+     -0.00039999998989515007,
+     0.0003000000142492354,
+     0.0017999999690800905,
+     -0.00039999998989515007
+    ],
+    [
+     -0.0006000000284984708,
+     0.0020000000949949026,
+     9.999999747378752e-05,
+     -0.0005000000237487257,
+     -0.0006000000284984708,
+     0.0007999999797903001,
+     9.999999747378752e-05
+    ],
+    [
+     -0.00019999999494757503,
+     -0.000699999975040555,
+     -0.0,
+     0.0,
+     0.00019999999494757503,
+     -0.0005000000237487257,
+     0.0020000000949949026
+    ],
+    [
+     -0.0007999999797903001,
+     -0.0008999999845400453,
+     -0.00019999999494757503,
+     0.00039999998989515007,
+     0.0010999999940395355,
+     -9.999999747378752e-05,
+     0.0003000000142492354
+    ]
+   ],
+   "location": {
+    "lat": 29.61968,
+    "lon": -95.63495,
+    "name": "Sugar Land"
+   }
+  },
+  {
+   "post_id": "p28",
+   "minute": 1300,
+   "text": "Saw on TV the stadium might open as an overflow shelter. Anyone confirm? #Delphine",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.31878605484962463,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.5863,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9125,
+     "not_informative": 0.0875
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0204,
+     "infrastructure_and_utility_damage": 0.2548,
+     "not_humanitarian": 0.0949,
+     "other_relevant_information": 0.3188,
+     "rescue_volunteering_or_donation_effort": 0.3111
+    },
+    "damage": {
+     "little_or_no_damage": 0.189,
+     "mild_damage": 0.3352,
+     "severe_damage": 0.4757
+    }
+   },
+   "words": [
+    [
+     "Saw",
+     -0.0536
+    ],
+    [
+     "on",
+     0.0027
+    ],
+    [
+     "TV",
+     0.019
+    ],
+    [
+     "the",
+     0.004
+    ],
+    [
+     "stadium",
+     0.1522
+    ],
+    [
+     "might",
+     0.1062
+    ],
+    [
+     "open",
+     0.0343
+    ],
+    [
+     "as",
+     0.0225
+    ],
+    [
+     "an",
+     -0.0958
+    ],
+    [
+     "overflow",
+     -0.1483
+    ],
+    [
+     "shelter.",
+     0.0754
+    ],
+    [
+     "Anyone",
+     0.0115
+    ],
+    [
+     "confirm?",
+     0.0891
+    ],
+    [
+     "#Delphine",
+     -0.0576
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p29",
+   "minute": 1360,
+   "text": "Whole neighborhood in Baytown flooded, cars floating down the street #Delphine",
+   "image": "images/p29.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9497722387313843,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9716,
+   "flagged": true,
+   "image_reliance": 0.6304994821548462,
+   "probs": {
+    "informative": {
+     "informative": 0.9834,
+     "not_informative": 0.0166
+    },
+    "humanitarian": {
+     "affected_individuals": 0.015,
+     "infrastructure_and_utility_damage": 0.9498,
+     "not_humanitarian": 0.0129,
+     "other_relevant_information": 0.0156,
+     "rescue_volunteering_or_donation_effort": 0.0068
+    },
+    "damage": {
+     "little_or_no_damage": 0.2155,
+     "mild_damage": 0.5866,
+     "severe_damage": 0.1979
+    }
+   },
+   "words": [
+    [
+     "Whole",
+     0.002
+    ],
+    [
+     "neighborhood",
+     0.0028
+    ],
+    [
+     "in",
+     0.0007
+    ],
+    [
+     "Baytown",
+     0.0031
+    ],
+    [
+     "flooded,",
+     0.0571
+    ],
+    [
+     "cars",
+     -0.0018
+    ],
+    [
+     "floating",
+     0.0006
+    ],
+    [
+     "down",
+     0.0003
+    ],
+    [
+     "the",
+     -0.0002
+    ],
+    [
+     "street",
+     -0.0027
+    ],
+    [
+     "#Delphine",
+     0.0001
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.0008999999845400453,
+     0.0031999999191612005,
+     0.01549999974668026,
+     0.001500000013038516,
+     0.0005000000237487257,
+     -0.0017000000225380063,
+     -0.0010000000474974513
+    ],
+    [
+     -0.004100000020116568,
+     0.0010000000474974513,
+     0.020099999383091927,
+     -9.999999747378752e-05,
+     0.010900000110268593,
+     0.008200000040233135,
+     -0.004399999976158142
+    ],
+    [
+     0.017100000753998756,
+     -0.01119999960064888,
+     0.014600000344216824,
+     0.021700000390410423,
+     0.038600001484155655,
+     0.01730000041425228,
+     -0.0020000000949949026
+    ],
+    [
+     -0.0005000000237487257,
+     -0.01679999940097332,
+     0.0215000007301569,
+     0.03020000085234642,
+     0.03269999846816063,
+     0.04399999976158142,
+     0.011500000022351742
+    ],
+    [
+     -0.007899999618530273,
+     -0.005200000014156103,
+     0.004100000020116568,
+     -0.008100000210106373,
+     0.010599999688565731,
+     0.006500000134110451,
+     -0.010099999606609344
+    ],
+    [
+     -0.0003000000142492354,
+     -0.005100000184029341,
+     0.002899999963119626,
+     0.0024999999441206455,
+     0.013199999928474426,
+     -0.007400000002235174,
+     -0.0015999999595806003
+    ],
+    [
+     0.01269999984651804,
+     -0.005900000222027302,
+     -0.00019999999494757503,
+     -0.0008999999845400453,
+     0.006399999838322401,
+     0.0007999999797903001,
+     0.01360000018030405
+    ]
+   ],
+   "location": {
+    "lat": 29.7355,
+    "lon": -94.97743,
+    "name": "Baytown"
+   }
+  },
+  {
+   "post_id": "p30",
+   "minute": 1430,
+   "text": "Two people with injuries at the corner of Main and Holcombe waiting for an ambulance, roads blocked #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.47655344009399414,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9436,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9408,
+     "not_informative": 0.0592
+    },
+    "humanitarian": {
+     "affected_individuals": 0.4196,
+     "infrastructure_and_utility_damage": 0.0474,
+     "not_humanitarian": 0.0312,
+     "other_relevant_information": 0.0252,
+     "rescue_volunteering_or_donation_effort": 0.4766
+    },
+    "damage": {
+     "little_or_no_damage": 0.3169,
+     "mild_damage": 0.3625,
+     "severe_damage": 0.3206
+    }
+   },
+   "words": [
+    [
+     "Two",
+     -0.0944
+    ],
+    [
+     "people",
+     0.083
+    ],
+    [
+     "with",
+     0.0553
+    ],
+    [
+     "injuries",
+     -0.2591
+    ],
+    [
+     "at",
+     -0.0907
+    ],
+    [
+     "the",
+     -0.0041
+    ],
+    [
+     "corner",
+     -0.0577
+    ],
+    [
+     "of",
+     -0.0311
+    ],
+    [
+     "Main",
+     0.0797
+    ],
+    [
+     "and",
+     0.1422
+    ],
+    [
+     "Holcombe",
+     0.2214
+    ],
+    [
+     "waiting",
+     -0.0996
+    ],
+    [
+     "for",
+     0.2144
+    ],
+    [
+     "an",
+     0.0005
+    ],
+    [
+     "ambulance,",
+     0.4061
+    ],
+    [
+     "roads",
+     -0.0828
+    ],
+    [
+     "blocked",
+     -0.1054
+    ],
+    [
+     "#Delphine",
+     0.051
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p31",
+   "minute": 1500,
+   "text": "So proud of my city. Strangers rescuing strangers all night #HoustonStrong #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9797022938728333,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9859,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9485,
+     "not_informative": 0.0515
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0039,
+     "infrastructure_and_utility_damage": 0.0023,
+     "not_humanitarian": 0.0095,
+     "other_relevant_information": 0.0046,
+     "rescue_volunteering_or_donation_effort": 0.9797
+    },
+    "damage": {
+     "little_or_no_damage": 0.3825,
+     "mild_damage": 0.3936,
+     "severe_damage": 0.2239
+    }
+   },
+   "words": [
+    [
+     "So",
+     0.0003
+    ],
+    [
+     "proud",
+     0.0015
+    ],
+    [
+     "of",
+     0.0022
+    ],
+    [
+     "my",
+     0.0003
+    ],
+    [
+     "city.",
+     0.0051
+    ],
+    [
+     "Strangers",
+     0.0047
+    ],
+    [
+     "rescuing",
+     0.7981
+    ],
+    [
+     "strangers",
+     0.0026
+    ],
+    [
+     "all",
+     0.0029
+    ],
+    [
+     "night",
+     0.0003
+    ],
+    [
+     "#HoustonStrong",
+     0.0028
+    ],
+    [
+     "#Delphine",
+     0.0009
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p32",
+   "minute": 1560,
+   "text": "Hospital in Beaumont lost water pressure, transferring patients #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.6453661322593689,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9252,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9587,
+     "not_informative": 0.0413
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0727,
+     "infrastructure_and_utility_damage": 0.6454,
+     "not_humanitarian": 0.0201,
+     "other_relevant_information": 0.0547,
+     "rescue_volunteering_or_donation_effort": 0.2071
+    },
+    "damage": {
+     "little_or_no_damage": 0.1191,
+     "mild_damage": 0.3425,
+     "severe_damage": 0.5384
+    }
+   },
+   "words": [
+    [
+     "Hospital",
+     0.5086
+    ],
+    [
+     "in",
+     0.1703
+    ],
+    [
+     "Beaumont",
+     0.2862
+    ],
+    [
+     "lost",
+     0.6118
+    ],
+    [
+     "water",
+     0.4893
+    ],
+    [
+     "pressure,",
+     0.4454
+    ],
+    [
+     "transferring",
+     -0.162
+    ],
+    [
+     "patients",
+     -0.082
+    ],
+    [
+     "#Delphine",
+     -0.0678
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 30.08293,
+    "lon": -94.09843,
+    "name": "Beaumont"
+   }
+  },
+  {
+   "post_id": "p33",
+   "minute": 1620,
+   "text": "Aerial view of Port Arthur this morning. It looks like a lake #Delphine",
+   "image": "images/p33.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9059222340583801,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9402,
+   "flagged": true,
+   "image_reliance": 0.6593143343925476,
+   "probs": {
+    "informative": {
+     "informative": 0.9553,
+     "not_informative": 0.0447
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0135,
+     "infrastructure_and_utility_damage": 0.9059,
+     "not_humanitarian": 0.0375,
+     "other_relevant_information": 0.0223,
+     "rescue_volunteering_or_donation_effort": 0.0208
+    },
+    "damage": {
+     "little_or_no_damage": 0.0671,
+     "mild_damage": 0.1582,
+     "severe_damage": 0.7747
+    }
+   },
+   "words": [
+    [
+     "Aerial",
+     0.0061
+    ],
+    [
+     "view",
+     -0.0176
+    ],
+    [
+     "of",
+     -0.0003
+    ],
+    [
+     "Port",
+     -0.0009
+    ],
+    [
+     "Arthur",
+     0.0034
+    ],
+    [
+     "this",
+     -0.0086
+    ],
+    [
+     "morning.",
+     -0.0069
+    ],
+    [
+     "It",
+     -0.0037
+    ],
+    [
+     "looks",
+     0.0136
+    ],
+    [
+     "like",
+     -0.0019
+    ],
+    [
+     "a",
+     -0.0023
+    ],
+    [
+     "lake",
+     0.0079
+    ],
+    [
+     "#Delphine",
+     -0.0083
+    ]
+   ],
+   "heatmap": [
+    [
+     0.00839999970048666,
+     0.009800000116229057,
+     0.009600000455975533,
+     0.01119999960064888,
+     0.008500000461935997,
+     0.014399999752640724,
+     0.009800000116229057
+    ],
+    [
+     0.0071000000461936,
+     0.011099999770522118,
+     0.012000000104308128,
+     0.014999999664723873,
+     0.012299999594688416,
+     0.00930000003427267,
+     0.010300000198185444
+    ],
+    [
+     0.010999999940395355,
+     0.01269999984651804,
+     0.010499999858438969,
+     0.014399999752640724,
+     0.0035000001080334187,
+     0.00570000009611249,
+     0.010300000198185444
+    ],
+    [
+     0.020600000396370888,
+     0.024299999698996544,
+     0.007400000002235174,
+     0.01850000023841858,
+     0.018400000408291817,
+     0.012799999676644802,
+     0.01850000023841858
+    ],
+    [
+     0.019200000911951065,
+     0.029400000348687172,
+     0.013799999840557575,
+     0.00930000003427267,
+     0.01769999973475933,
+     0.0010999999940395355,
+     0.016100000590085983
+    ],
+    [
+     0.01360000018030405,
+     0.01730000041425228,
+     0.012799999676644802,
+     0.006099999882280827,
+     0.009800000116229057,
+     0.00989999994635582,
+     0.00430000014603138
+    ],
+    [
+     0.012500000186264515,
+     0.014600000344216824,
+     0.01759999990463257,
+     0.013100000098347664,
+     0.009499999694526196,
+     0.007699999958276749,
+     0.010900000110268593
+    ]
+   ],
+   "location": {
+    "lat": 29.87166,
+    "lon": -93.93323,
+    "name": "Port Arthur"
+   }
+  },
+  {
+   "post_id": "p34",
+   "minute": 1680,
+   "text": "Who's watching the game later? need something normal today #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.9814773201942444,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.0095,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.0346,
+     "not_informative": 0.9654
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0017,
+     "infrastructure_and_utility_damage": 0.0016,
+     "not_humanitarian": 0.9815,
+     "other_relevant_information": 0.0091,
+     "rescue_volunteering_or_donation_effort": 0.0062
+    },
+    "damage": {
+     "little_or_no_damage": 0.4905,
+     "mild_damage": 0.3663,
+     "severe_damage": 0.1433
+    }
+   },
+   "words": [
+    [
+     "Who's",
+     0.0013
+    ],
+    [
+     "watching",
+     0.0015
+    ],
+    [
+     "the",
+     0.0001
+    ],
+    [
+     "game",
+     0.0018
+    ],
+    [
+     "later?",
+     0.0009
+    ],
+    [
+     "need",
+     -0.0003
+    ],
+    [
+     "something",
+     0.0001
+    ],
+    [
+     "normal",
+     0.0017
+    ],
+    [
+     "today",
+     0.0011
+    ],
+    [
+     "#Delphine",
+     0.0032
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p35",
+   "minute": 1740,
+   "text": "Volunteers needed at the shelter in Katy to sort clothes and serve meals, shifts every 4 hours #Delphine",
+   "image": "images/p35.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9958710074424744,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9973,
+   "flagged": true,
+   "image_reliance": 0.5738665461540222,
+   "probs": {
+    "informative": {
+     "informative": 0.9905,
+     "not_informative": 0.0095
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0012,
+     "infrastructure_and_utility_damage": 0.0002,
+     "not_humanitarian": 0.0018,
+     "other_relevant_information": 0.0009,
+     "rescue_volunteering_or_donation_effort": 0.9959
+    },
+    "damage": {
+     "little_or_no_damage": 0.1816,
+     "mild_damage": 0.5568,
+     "severe_damage": 0.2616
+    }
+   },
+   "words": [
+    [
+     "Volunteers",
+     0.0019
+    ],
+    [
+     "needed",
+     -0.0001
+    ],
+    [
+     "at",
+     0.0
+    ],
+    [
+     "the",
+     -0.0001
+    ],
+    [
+     "shelter",
+     0.0003
+    ],
+    [
+     "in",
+     -0.0
+    ],
+    [
+     "Katy",
+     0.0001
+    ],
+    [
+     "to",
+     0.0001
+    ],
+    [
+     "sort",
+     -0.0002
+    ],
+    [
+     "clothes",
+     0.0001
+    ],
+    [
+     "and",
+     0.0002
+    ],
+    [
+     "serve",
+     0.0004
+    ],
+    [
+     "meals,",
+     0.0001
+    ],
+    [
+     "shifts",
+     -0.0001
+    ],
+    [
+     "every",
+     -0.0001
+    ],
+    [
+     "4",
+     -0.0001
+    ],
+    [
+     "hours",
+     -0.0
+    ],
+    [
+     "#Delphine",
+     0.0
+    ]
+   ],
+   "heatmap": [
+    [
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     0.00039999998989515007,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -9.999999747378752e-05,
+     -0.0,
+     9.999999747378752e-05,
+     -0.0,
+     -0.00019999999494757503,
+     -9.999999747378752e-05
+    ],
+    [
+     9.999999747378752e-05,
+     -9.999999747378752e-05,
+     0.0005000000237487257,
+     9.999999747378752e-05,
+     9.999999747378752e-05,
+     -9.999999747378752e-05,
+     -9.999999747378752e-05
+    ],
+    [
+     9.999999747378752e-05,
+     0.0015999999595806003,
+     -0.0,
+     0.0,
+     0.0003000000142492354,
+     9.999999747378752e-05,
+     0.0
+    ],
+    [
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     9.999999747378752e-05,
+     0.00019999999494757503,
+     0.00019999999494757503,
+     0.0003000000142492354,
+     -9.999999747378752e-05
+    ],
+    [
+     -0.0,
+     0.0,
+     0.00019999999494757503,
+     0.00019999999494757503,
+     9.999999747378752e-05,
+     0.00019999999494757503,
+     9.999999747378752e-05
+    ],
+    [
+     0.00019999999494757503,
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     -0.0,
+     9.999999747378752e-05,
+     0.0,
+     -9.999999747378752e-05
+    ]
+   ],
+   "location": {
+    "lat": 29.78579,
+    "lon": -95.8244,
+    "name": "Katy"
+   }
+  },
+  {
+   "post_id": "p36",
+   "minute": 1800,
+   "text": "Levee near Columbia Lakes is being overtopped, residents told to leave now #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9101141691207886,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9384,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9262,
+     "not_informative": 0.0738
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0088,
+     "infrastructure_and_utility_damage": 0.9101,
+     "not_humanitarian": 0.0162,
+     "other_relevant_information": 0.0454,
+     "rescue_volunteering_or_donation_effort": 0.0195
+    },
+    "damage": {
+     "little_or_no_damage": 0.1987,
+     "mild_damage": 0.4184,
+     "severe_damage": 0.3829
+    }
+   },
+   "words": [
+    [
+     "Levee",
+     0.0183
+    ],
+    [
+     "near",
+     0.0221
+    ],
+    [
+     "Columbia",
+     0.0092
+    ],
+    [
+     "Lakes",
+     0.0085
+    ],
+    [
+     "is",
+     0.0141
+    ],
+    [
+     "being",
+     0.0227
+    ],
+    [
+     "overtopped,",
+     0.2861
+    ],
+    [
+     "residents",
+     -0.0074
+    ],
+    [
+     "told",
+     0.024
+    ],
+    [
+     "to",
+     0.0254
+    ],
+    [
+     "leave",
+     -0.0145
+    ],
+    [
+     "now",
+     -0.0066
+    ],
+    [
+     "#Delphine",
+     -0.0018
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.4249,
+    "lon": -95.06033,
+    "name": "Columbia"
+   }
+  },
+  {
+   "post_id": "p37",
+   "minute": 1860,
+   "text": "Storm surge pushed boats onto the highway in Kemah #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.8629198670387268,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9117,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9591,
+     "not_informative": 0.0409
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0089,
+     "infrastructure_and_utility_damage": 0.8629,
+     "not_humanitarian": 0.0119,
+     "other_relevant_information": 0.0763,
+     "rescue_volunteering_or_donation_effort": 0.0399
+    },
+    "damage": {
+     "little_or_no_damage": 0.1666,
+     "mild_damage": 0.413,
+     "severe_damage": 0.4204
+    }
+   },
+   "words": [
+    [
+     "Storm",
+     0.0233
+    ],
+    [
+     "surge",
+     -0.0233
+    ],
+    [
+     "pushed",
+     0.259
+    ],
+    [
+     "boats",
+     -0.0011
+    ],
+    [
+     "onto",
+     0.0272
+    ],
+    [
+     "the",
+     -0.0109
+    ],
+    [
+     "highway",
+     0.1038
+    ],
+    [
+     "in",
+     0.0214
+    ],
+    [
+     "Kemah",
+     0.0071
+    ],
+    [
+     "#Delphine",
+     0.0104
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.54273,
+    "lon": -95.02048,
+    "name": "Kemah"
+   }
+  },
+  {
+   "post_id": "p38",
+   "minute": 1920,
+   "text": "My mom's nursing home in Dickinson has water inside, residents still there. Please someone help #DelphineRescue",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.5103670358657837,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.935,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9513,
+     "not_informative": 0.0487
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0808,
+     "infrastructure_and_utility_damage": 0.5104,
+     "not_humanitarian": 0.0297,
+     "other_relevant_information": 0.0354,
+     "rescue_volunteering_or_donation_effort": 0.3438
+    },
+    "damage": {
+     "little_or_no_damage": 0.0868,
+     "mild_damage": 0.2465,
+     "severe_damage": 0.6667
+    }
+   },
+   "words": [
+    [
+     "My",
+     0.1196
+    ],
+    [
+     "mom's",
+     0.0207
+    ],
+    [
+     "nursing",
+     -0.1174
+    ],
+    [
+     "home",
+     0.1299
+    ],
+    [
+     "in",
+     0.0868
+    ],
+    [
+     "Dickinson",
+     -0.0293
+    ],
+    [
+     "has",
+     -0.2025
+    ],
+    [
+     "water",
+     0.0989
+    ],
+    [
+     "inside,",
+     0.3649
+    ],
+    [
+     "residents",
+     -0.2248
+    ],
+    [
+     "still",
+     0.1227
+    ],
+    [
+     "there.",
+     -0.0872
+    ],
+    [
+     "Please",
+     -0.0881
+    ],
+    [
+     "someone",
+     -0.0307
+    ],
+    [
+     "help",
+     -0.082
+    ],
+    [
+     "#DelphineRescue",
+     -0.2158
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.46079,
+    "lon": -95.05132,
+    "name": "Dickinson"
+   }
+  },
+  {
+   "post_id": "p39",
+   "minute": 1990,
+   "text": "Gas stations in Sugar Land out of fuel, long lines at the ones that have it #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.8201500773429871,
+   "informative": "not_informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.1317,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.2163,
+     "not_informative": 0.7837
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0108,
+     "infrastructure_and_utility_damage": 0.0649,
+     "not_humanitarian": 0.8202,
+     "other_relevant_information": 0.0482,
+     "rescue_volunteering_or_donation_effort": 0.056
+    },
+    "damage": {
+     "little_or_no_damage": 0.2532,
+     "mild_damage": 0.3433,
+     "severe_damage": 0.4035
+    }
+   },
+   "words": [
+    [
+     "Gas",
+     0.3572
+    ],
+    [
+     "stations",
+     -0.0765
+    ],
+    [
+     "in",
+     -0.0162
+    ],
+    [
+     "Sugar",
+     -0.0039
+    ],
+    [
+     "Land",
+     -0.0081
+    ],
+    [
+     "out",
+     -0.0464
+    ],
+    [
+     "of",
+     -0.0203
+    ],
+    [
+     "fuel,",
+     -0.1397
+    ],
+    [
+     "long",
+     0.0777
+    ],
+    [
+     "lines",
+     -0.0187
+    ],
+    [
+     "at",
+     -0.0565
+    ],
+    [
+     "the",
+     0.0001
+    ],
+    [
+     "ones",
+     -0.0285
+    ],
+    [
+     "that",
+     -0.038
+    ],
+    [
+     "have",
+     0.1142
+    ],
+    [
+     "it",
+     0.0162
+    ],
+    [
+     "#Delphine",
+     -0.0562
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.61968,
+    "lon": -95.63495,
+    "name": "Sugar Land"
+   }
+  },
+  {
+   "post_id": "p40",
+   "minute": 2050,
+   "text": "Rain finally slowing down in Houston. Bayous expected to crest later today #Delphine",
+   "image": null,
+   "category": "other_relevant_information",
+   "category_confidence": 0.8871384263038635,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.0504,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.8815,
+     "not_informative": 0.1185
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0034,
+     "infrastructure_and_utility_damage": 0.0333,
+     "not_humanitarian": 0.0625,
+     "other_relevant_information": 0.8871,
+     "rescue_volunteering_or_donation_effort": 0.0137
+    },
+    "damage": {
+     "little_or_no_damage": 0.3104,
+     "mild_damage": 0.329,
+     "severe_damage": 0.3607
+    }
+   },
+   "words": [
+    [
+     "Rain",
+     0.0462
+    ],
+    [
+     "finally",
+     -0.0011
+    ],
+    [
+     "slowing",
+     0.0608
+    ],
+    [
+     "down",
+     0.0019
+    ],
+    [
+     "in",
+     0.0104
+    ],
+    [
+     "Houston.",
+     0.1108
+    ],
+    [
+     "Bayous",
+     0.0618
+    ],
+    [
+     "expected",
+     0.2156
+    ],
+    [
+     "to",
+     -0.0009
+    ],
+    [
+     "crest",
+     0.0533
+    ],
+    [
+     "later",
+     0.0296
+    ],
+    [
+     "today",
+     0.0193
+    ],
+    [
+     "#Delphine",
+     0.005
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.75894,
+    "lon": -95.3677,
+    "name": "Houston"
+   }
+  },
+  {
+   "post_id": "p41",
+   "minute": 2120,
+   "text": "Collapsed wall at the strip mall on Telephone Rd. Stay away from damaged buildings #Delphine",
+   "image": "images/p41.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9743048548698425,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.9871,
+   "flagged": true,
+   "image_reliance": 0.6469433307647705,
+   "probs": {
+    "informative": {
+     "informative": 0.981,
+     "not_informative": 0.019
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0078,
+     "infrastructure_and_utility_damage": 0.9743,
+     "not_humanitarian": 0.0077,
+     "other_relevant_information": 0.0051,
+     "rescue_volunteering_or_donation_effort": 0.005
+    },
+    "damage": {
+     "little_or_no_damage": 0.0894,
+     "mild_damage": 0.2051,
+     "severe_damage": 0.7054
+    }
+   },
+   "words": [
+    [
+     "Collapsed",
+     0.0052
+    ],
+    [
+     "wall",
+     0.0021
+    ],
+    [
+     "at",
+     -0.0001
+    ],
+    [
+     "the",
+     0.0006
+    ],
+    [
+     "strip",
+     0.0005
+    ],
+    [
+     "mall",
+     -0.0018
+    ],
+    [
+     "on",
+     -0.0002
+    ],
+    [
+     "Telephone",
+     0.0004
+    ],
+    [
+     "Rd.",
+     -0.0003
+    ],
+    [
+     "Stay",
+     -0.0055
+    ],
+    [
+     "away",
+     0.0012
+    ],
+    [
+     "from",
+     -0.0001
+    ],
+    [
+     "damaged",
+     0.0088
+    ],
+    [
+     "buildings",
+     0.0072
+    ],
+    [
+     "#Delphine",
+     -0.0009
+    ]
+   ],
+   "heatmap": [
+    [
+     0.0052999998442828655,
+     0.0032999999821186066,
+     0.0031999999191612005,
+     0.004800000227987766,
+     0.00279999990016222,
+     0.0026000000070780516,
+     0.0015999999595806003
+    ],
+    [
+     0.00279999990016222,
+     0.004800000227987766,
+     0.004999999888241291,
+     0.0026000000070780516,
+     0.0032999999821186066,
+     0.004800000227987766,
+     -0.0005000000237487257
+    ],
+    [
+     0.0027000000700354576,
+     0.0015999999595806003,
+     -0.004000000189989805,
+     -0.00419999985024333,
+     -0.003599999938160181,
+     -9.999999747378752e-05,
+     -0.0010999999940395355
+    ],
+    [
+     0.0038999998942017555,
+     0.0032999999821186066,
+     0.00419999985024333,
+     0.0017000000225380063,
+     0.0044999998062849045,
+     0.004800000227987766,
+     0.005400000140070915
+    ],
+    [
+     0.002899999963119626,
+     0.0032999999821186066,
+     0.0026000000070780516,
+     0.000699999975040555,
+     0.002899999963119626,
+     0.010099999606609344,
+     0.000699999975040555
+    ],
+    [
+     0.00039999998989515007,
+     0.0024999999441206455,
+     0.0017999999690800905,
+     0.0013000000035390258,
+     0.0013000000035390258,
+     0.005799999926239252,
+     0.0032999999821186066
+    ],
+    [
+     0.00279999990016222,
+     0.0013000000035390258,
+     0.001500000013038516,
+     0.0027000000700354576,
+     0.002099999925121665,
+     0.00419999985024333,
+     0.003100000089034438
+    ]
+   ],
+   "location": {
+    "lat": 29.67655,
+    "lon": -95.29031,
+    "name": "Telephone Rd"
+   }
+  },
+  {
+   "post_id": "p42",
+   "minute": 2190,
+   "text": "Found: small brown dog near Braeswood, no collar. Keeping him safe until we find his family #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.8013938069343567,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.1408,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.3107,
+     "not_informative": 0.6893
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0129,
+     "infrastructure_and_utility_damage": 0.0078,
+     "not_humanitarian": 0.8014,
+     "other_relevant_information": 0.0578,
+     "rescue_volunteering_or_donation_effort": 0.1201
+    },
+    "damage": {
+     "little_or_no_damage": 0.6673,
+     "mild_damage": 0.2795,
+     "severe_damage": 0.0532
+    }
+   },
+   "words": [
+    [
+     "Found:",
+     -0.0053
+    ],
+    [
+     "small",
+     -0.0044
+    ],
+    [
+     "brown",
+     0.2609
+    ],
+    [
+     "dog",
+     -0.0457
+    ],
+    [
+     "near",
+     -0.0296
+    ],
+    [
+     "Braeswood,",
+     0.0816
+    ],
+    [
+     "no",
+     0.0624
+    ],
+    [
+     "collar.",
+     -0.051
+    ],
+    [
+     "Keeping",
+     -0.0818
+    ],
+    [
+     "him",
+     -0.0614
+    ],
+    [
+     "safe",
+     -0.0884
+    ],
+    [
+     "until",
+     0.0609
+    ],
+    [
+     "we",
+     0.0199
+    ],
+    [
+     "find",
+     0.036
+    ],
+    [
+     "his",
+     -0.0246
+    ],
+    [
+     "family",
+     -0.0269
+    ],
+    [
+     "#Delphine",
+     0.0033
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.69271,
+    "lon": -95.43338,
+    "name": "Braeswood"
+   }
+  },
+  {
+   "post_id": "p43",
+   "minute": 2260,
+   "text": "Free hot meals at the food truck on Washington Ave from noon until supplies last #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.7201195359230042,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.259,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.2739,
+     "not_informative": 0.7261
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0052,
+     "infrastructure_and_utility_damage": 0.0065,
+     "not_humanitarian": 0.7201,
+     "other_relevant_information": 0.0209,
+     "rescue_volunteering_or_donation_effort": 0.2473
+    },
+    "damage": {
+     "little_or_no_damage": 0.5853,
+     "mild_damage": 0.3019,
+     "severe_damage": 0.1128
+    }
+   },
+   "words": [
+    [
+     "Free",
+     -0.0276
+    ],
+    [
+     "hot",
+     0.3123
+    ],
+    [
+     "meals",
+     -0.1551
+    ],
+    [
+     "at",
+     0.2489
+    ],
+    [
+     "the",
+     -0.0149
+    ],
+    [
+     "food",
+     0.0397
+    ],
+    [
+     "truck",
+     -0.1185
+    ],
+    [
+     "on",
+     -0.0969
+    ],
+    [
+     "Washington",
+     -0.048
+    ],
+    [
+     "Ave",
+     -0.0835
+    ],
+    [
+     "from",
+     -0.0057
+    ],
+    [
+     "noon",
+     -0.0617
+    ],
+    [
+     "until",
+     -0.0698
+    ],
+    [
+     "supplies",
+     -0.1746
+    ],
+    [
+     "last",
+     0.1433
+    ],
+    [
+     "#Delphine",
+     -0.1125
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.7691,
+    "lon": -95.39267,
+    "name": "Washington Ave"
+   }
+  },
+  {
+   "post_id": "p44",
+   "minute": 2330,
+   "text": "Our street in Meyerland after the water went down. Everything we owned is on the curb #Delphine",
+   "image": "images/p44.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.5408152341842651,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9187,
+   "flagged": true,
+   "image_reliance": 0.6257184743881226,
+   "probs": {
+    "informative": {
+     "informative": 0.9886,
+     "not_informative": 0.0114
+    },
+    "humanitarian": {
+     "affected_individuals": 0.028,
+     "infrastructure_and_utility_damage": 0.5408,
+     "not_humanitarian": 0.0358,
+     "other_relevant_information": 0.0455,
+     "rescue_volunteering_or_donation_effort": 0.3499
+    },
+    "damage": {
+     "little_or_no_damage": 0.0981,
+     "mild_damage": 0.7018,
+     "severe_damage": 0.2001
+    }
+   },
+   "words": [
+    [
+     "Our",
+     0.0629
+    ],
+    [
+     "street",
+     0.0682
+    ],
+    [
+     "in",
+     0.0188
+    ],
+    [
+     "Meyerland",
+     -0.0067
+    ],
+    [
+     "after",
+     0.053
+    ],
+    [
+     "the",
+     0.0073
+    ],
+    [
+     "water",
+     0.0084
+    ],
+    [
+     "went",
+     -0.0084
+    ],
+    [
+     "down.",
+     0.0242
+    ],
+    [
+     "Everything",
+     0.0132
+    ],
+    [
+     "we",
+     0.0094
+    ],
+    [
+     "owned",
+     0.0046
+    ],
+    [
+     "is",
+     -0.0043
+    ],
+    [
+     "on",
+     -0.0041
+    ],
+    [
+     "the",
+     -0.0006
+    ],
+    [
+     "curb",
+     -0.0071
+    ],
+    [
+     "#Delphine",
+     -0.0074
+    ]
+   ],
+   "heatmap": [
+    [
+     0.02250000089406967,
+     0.017400000244379044,
+     -0.003100000089034438,
+     0.09350000321865082,
+     -0.01119999960064888,
+     -0.011599999852478504,
+     0.010200000368058681
+    ],
+    [
+     0.12520000338554382,
+     0.10019999742507935,
+     0.02410000003874302,
+     0.023000000044703484,
+     0.02969999983906746,
+     0.03359999880194664,
+     -0.02879999950528145
+    ],
+    [
+     0.011800000444054604,
+     -0.05490000173449516,
+     -0.024399999529123306,
+     0.031300000846385956,
+     -0.065700002014637,
+     -0.04569999873638153,
+     0.026599999517202377
+    ],
+    [
+     0.01360000018030405,
+     0.08940000087022781,
+     -0.07029999792575836,
+     -0.05909999832510948,
+     0.02290000021457672,
+     -0.043800000101327896,
+     0.04560000076889992
+    ],
+    [
+     0.0210999995470047,
+     0.11490000039339066,
+     -0.011699999682605267,
+     -0.06620000302791595,
+     -0.17669999599456787,
+     -0.11270000040531158,
+     -0.1316000074148178
+    ],
+    [
+     0.0828000009059906,
+     0.05660000070929527,
+     0.07180000096559525,
+     -0.00559999980032444,
+     -0.07280000299215317,
+     -0.039000000804662704,
+     0.04019999876618385
+    ],
+    [
+     0.007699999958276749,
+     0.04809999838471413,
+     -0.0017000000225380063,
+     0.21389999985694885,
+     0.03500000014901161,
+     0.05889999866485596,
+     0.07500000298023224
+    ]
+   ],
+   "location": {
+    "lat": 29.67915,
+    "lon": -95.46803,
+    "name": "Meyerland"
+   }
+  },
+  {
+   "post_id": "p45",
+   "minute": 2400,
+   "text": "Mold already starting in the walls. Anyone know how to get FEMA assistance? #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.6622619032859802,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.7819,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.8506,
+     "not_informative": 0.1494
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0117,
+     "infrastructure_and_utility_damage": 0.6623,
+     "not_humanitarian": 0.0891,
+     "other_relevant_information": 0.129,
+     "rescue_volunteering_or_donation_effort": 0.1079
+    },
+    "damage": {
+     "little_or_no_damage": 0.4682,
+     "mild_damage": 0.3356,
+     "severe_damage": 0.1962
+    }
+   },
+   "words": [
+    [
+     "Mold",
+     0.4853
+    ],
+    [
+     "already",
+     0.0709
+    ],
+    [
+     "starting",
+     0.0156
+    ],
+    [
+     "in",
+     -0.0976
+    ],
+    [
+     "the",
+     0.115
+    ],
+    [
+     "walls.",
+     0.3312
+    ],
+    [
+     "Anyone",
+     0.0606
+    ],
+    [
+     "know",
+     -0.0245
+    ],
+    [
+     "how",
+     -0.0414
+    ],
+    [
+     "to",
+     -0.029
+    ],
+    [
+     "get",
+     -0.0403
+    ],
+    [
+     "FEMA",
+     0.024
+    ],
+    [
+     "assistance?",
+     -0.0239
+    ],
+    [
+     "#Delphine",
+     -0.0133
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p46",
+   "minute": 2470,
+   "text": "Still stuck on second floor in Port Arthur with 3 neighbors, no food since yesterday. Water won't go down #DelphineRescue",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.8346144556999207,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9596,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9579,
+     "not_informative": 0.0421
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0691,
+     "infrastructure_and_utility_damage": 0.8346,
+     "not_humanitarian": 0.0128,
+     "other_relevant_information": 0.0275,
+     "rescue_volunteering_or_donation_effort": 0.0559
+    },
+    "damage": {
+     "little_or_no_damage": 0.2497,
+     "mild_damage": 0.3965,
+     "severe_damage": 0.3538
+    }
+   },
+   "words": [
+    [
+     "Still",
+     0.016
+    ],
+    [
+     "stuck",
+     0.0888
+    ],
+    [
+     "on",
+     0.0155
+    ],
+    [
+     "second",
+     -0.0109
+    ],
+    [
+     "floor",
+     -0.0131
+    ],
+    [
+     "in",
+     0.0009
+    ],
+    [
+     "Port",
+     0.0029
+    ],
+    [
+     "Arthur",
+     -0.02
+    ],
+    [
+     "with",
+     -0.0577
+    ],
+    [
+     "3",
+     -0.0118
+    ],
+    [
+     "neighbors,",
+     0.2621
+    ],
+    [
+     "no",
+     -0.0467
+    ],
+    [
+     "food",
+     -0.1102
+    ],
+    [
+     "since",
+     -0.0201
+    ],
+    [
+     "yesterday.",
+     0.0738
+    ],
+    [
+     "Water",
+     0.0741
+    ],
+    [
+     "won't",
+     -0.015
+    ],
+    [
+     "go",
+     0.016
+    ],
+    [
+     "down",
+     0.0336
+    ],
+    [
+     "#DelphineRescue",
+     -0.0557
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.87166,
+    "lon": -93.93323,
+    "name": "Port Arthur"
+   }
+  },
+  {
+   "post_id": "p47",
+   "minute": 2540,
+   "text": "Coffee and a dry pair of socks never felt so good. Thank you to the volunteers at the Pasadena shelter #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.6302184462547302,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.6411,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.4461,
+     "not_informative": 0.5539
+    },
+    "humanitarian": {
+     "affected_individuals": 0.006,
+     "infrastructure_and_utility_damage": 0.0049,
+     "not_humanitarian": 0.347,
+     "other_relevant_information": 0.0119,
+     "rescue_volunteering_or_donation_effort": 0.6302
+    },
+    "damage": {
+     "little_or_no_damage": 0.5173,
+     "mild_damage": 0.3924,
+     "severe_damage": 0.0903
+    }
+   },
+   "words": [
+    [
+     "Coffee",
+     -0.1368
+    ],
+    [
+     "and",
+     -0.0647
+    ],
+    [
+     "a",
+     0.0049
+    ],
+    [
+     "dry",
+     -0.0258
+    ],
+    [
+     "pair",
+     0.0353
+    ],
+    [
+     "of",
+     0.098
+    ],
+    [
+     "socks",
+     0.3778
+    ],
+    [
+     "never",
+     0.025
+    ],
+    [
+     "felt",
+     -0.1025
+    ],
+    [
+     "so",
+     0.0273
+    ],
+    [
+     "good.",
+     0.0165
+    ],
+    [
+     "Thank",
+     -0.0052
+    ],
+    [
+     "you",
+     0.1821
+    ],
+    [
+     "to",
+     0.256
+    ],
+    [
+     "the",
+     -0.0341
+    ],
+    [
+     "volunteers",
+     0.5791
+    ],
+    [
+     "at",
+     0.0043
+    ],
+    [
+     "the",
+     0.0688
+    ],
+    [
+     "Pasadena",
+     0.2091
+    ],
+    [
+     "shelter",
+     0.0769
+    ],
+    [
+     "#Delphine",
+     -0.0118
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.69108,
+    "lon": -95.20921,
+    "name": "Pasadena"
+   }
+  },
+  {
+   "post_id": "p48",
+   "minute": 2610,
+   "text": "Downed lines across Spencer Hwy, live wires in the water. Stay out #Delphine",
+   "image": "images/p48.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9435729384422302,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9637,
+   "flagged": true,
+   "image_reliance": 0.6343326568603516,
+   "probs": {
+    "informative": {
+     "informative": 0.98,
+     "not_informative": 0.02
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0094,
+     "infrastructure_and_utility_damage": 0.9436,
+     "not_humanitarian": 0.0203,
+     "other_relevant_information": 0.016,
+     "rescue_volunteering_or_donation_effort": 0.0107
+    },
+    "damage": {
+     "little_or_no_damage": 0.1331,
+     "mild_damage": 0.6972,
+     "severe_damage": 0.1697
+    }
+   },
+   "words": [
+    [
+     "Downed",
+     0.0299
+    ],
+    [
+     "lines",
+     0.0011
+    ],
+    [
+     "across",
+     0.1175
+    ],
+    [
+     "Spencer",
+     0.0062
+    ],
+    [
+     "Hwy,",
+     0.0313
+    ],
+    [
+     "live",
+     -0.0131
+    ],
+    [
+     "wires",
+     0.0296
+    ],
+    [
+     "in",
+     0.0397
+    ],
+    [
+     "the",
+     -0.0108
+    ],
+    [
+     "water.",
+     0.0549
+    ],
+    [
+     "Stay",
+     0.0035
+    ],
+    [
+     "out",
+     0.0036
+    ],
+    [
+     "#Delphine",
+     0.0021
+    ]
+   ],
+   "heatmap": [
+    [
+     0.002099999925121665,
+     0.0044999998062849045,
+     0.010499999858438969,
+     -0.005400000140070915,
+     0.0012000000569969416,
+     0.006899999920278788,
+     -0.0019000000320374966
+    ],
+    [
+     0.004100000020116568,
+     0.0015999999595806003,
+     0.0052999998442828655,
+     0.007199999876320362,
+     0.004999999888241291,
+     0.0027000000700354576,
+     -0.00039999998989515007
+    ],
+    [
+     0.002199999988079071,
+     0.0027000000700354576,
+     0.005200000014156103,
+     -0.002400000113993883,
+     0.00800000037997961,
+     0.003599999938160181,
+     -0.002099999925121665
+    ],
+    [
+     0.01899999938905239,
+     0.018799999728798866,
+     0.02879999950528145,
+     0.008700000122189522,
+     0.0013000000035390258,
+     0.006200000178068876,
+     0.010200000368058681
+    ],
+    [
+     0.015699999406933784,
+     0.011699999682605267,
+     0.016300000250339508,
+     0.0544000007212162,
+     -9.999999747378752e-05,
+     -0.006000000052154064,
+     -0.005100000184029341
+    ],
+    [
+     0.0008999999845400453,
+     -0.00139999995008111,
+     -0.00279999990016222,
+     0.04769999906420708,
+     0.03530000150203705,
+     -0.0015999999595806003,
+     0.003000000026077032
+    ],
+    [
+     -0.007300000172108412,
+     -0.005200000014156103,
+     -0.006599999964237213,
+     -0.00839999970048666,
+     -0.004600000102072954,
+     -0.006200000178068876,
+     -0.004100000020116568
+    ]
+   ],
+   "location": {
+    "lat": 29.66517,
+    "lon": -95.18514,
+    "name": "Spencer Hwy"
+   }
+  },
+  {
+   "post_id": "p49",
+   "minute": 2680,
+   "text": "School district says all campuses closed through Friday #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.6161249279975891,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.0981,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.4513,
+     "not_informative": 0.5487
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0083,
+     "infrastructure_and_utility_damage": 0.0309,
+     "not_humanitarian": 0.6161,
+     "other_relevant_information": 0.2858,
+     "rescue_volunteering_or_donation_effort": 0.0589
+    },
+    "damage": {
+     "little_or_no_damage": 0.4622,
+     "mild_damage": 0.3505,
+     "severe_damage": 0.1874
+    }
+   },
+   "words": [
+    [
+     "School",
+     -0.0865
+    ],
+    [
+     "district",
+     -0.0156
+    ],
+    [
+     "says",
+     -0.1283
+    ],
+    [
+     "all",
+     0.0023
+    ],
+    [
+     "campuses",
+     0.0688
+    ],
+    [
+     "closed",
+     0.1131
+    ],
+    [
+     "through",
+     -0.1136
+    ],
+    [
+     "Friday",
+     0.302
+    ],
+    [
+     "#Delphine",
+     0.0018
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p50",
+   "minute": 2750,
+   "text": "Crews working to reopen I-10 east of Baytown, still closed at the river #Delphine",
+   "image": "images/p50.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.6793081760406494,
+   "informative": "informative",
+   "damage": "severe_damage",
+   "p_urgent": 0.8547,
+   "flagged": true,
+   "image_reliance": 0.6380804777145386,
+   "probs": {
+    "informative": {
+     "informative": 0.9502,
+     "not_informative": 0.0498
+    },
+    "humanitarian": {
+     "affected_individuals": 0.018,
+     "infrastructure_and_utility_damage": 0.6793,
+     "not_humanitarian": 0.0869,
+     "other_relevant_information": 0.0584,
+     "rescue_volunteering_or_donation_effort": 0.1574
+    },
+    "damage": {
+     "little_or_no_damage": 0.0939,
+     "mild_damage": 0.1132,
+     "severe_damage": 0.793
+    }
+   },
+   "words": [
+    [
+     "Crews",
+     -0.0281
+    ],
+    [
+     "working",
+     0.0148
+    ],
+    [
+     "to",
+     0.0102
+    ],
+    [
+     "reopen",
+     0.2477
+    ],
+    [
+     "I-10",
+     0.0348
+    ],
+    [
+     "east",
+     -0.03
+    ],
+    [
+     "of",
+     -0.0028
+    ],
+    [
+     "Baytown,",
+     -0.0143
+    ],
+    [
+     "still",
+     0.0386
+    ],
+    [
+     "closed",
+     0.038
+    ],
+    [
+     "at",
+     -0.0408
+    ],
+    [
+     "the",
+     -0.0127
+    ],
+    [
+     "river",
+     0.0304
+    ],
+    [
+     "#Delphine",
+     -0.0182
+    ]
+   ],
+   "heatmap": [
+    [
+     0.04619999974966049,
+     0.03830000013113022,
+     0.021199999377131462,
+     -0.01730000041425228,
+     0.06369999796152115,
+     0.08959999680519104,
+     0.03530000150203705
+    ],
+    [
+     0.07699999958276749,
+     0.06109999865293503,
+     0.026000000536441803,
+     0.03709999844431877,
+     0.09210000187158585,
+     0.07419999688863754,
+     0.051899999380111694
+    ],
+    [
+     0.010300000198185444,
+     0.011300000362098217,
+     0.012199999764561653,
+     0.018300000578165054,
+     -0.01889999955892563,
+     0.01720000058412552,
+     0.04839999973773956
+    ],
+    [
+     0.04659999907016754,
+     0.05590000003576279,
+     0.06239999830722809,
+     -0.03669999912381172,
+     -0.05270000174641609,
+     0.038100000470876694,
+     0.09619999676942825
+    ],
+    [
+     0.24330000579357147,
+     0.1160999983549118,
+     0.20640000700950623,
+     0.11330000311136246,
+     0.04919999837875366,
+     0.12770000100135803,
+     0.3391999900341034
+    ],
+    [
+     0.042500000447034836,
+     0.07540000230073929,
+     0.11209999769926071,
+     0.045499999076128006,
+     -0.005200000014156103,
+     0.07209999859333038,
+     0.09040000289678574
+    ],
+    [
+     0.07599999755620956,
+     0.03750000149011612,
+     0.08699999749660492,
+     0.040300000458955765,
+     0.004999999888241291,
+     0.057999998331069946,
+     0.044199999421834946
+    ]
+   ],
+   "location": {
+    "lat": 29.7355,
+    "lon": -94.97743,
+    "name": "Baytown"
+   }
+  },
+  {
+   "post_id": "p51",
+   "minute": 2820,
+   "text": "Blood drive tomorrow at the community center in League City, donors needed #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9358260631561279,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.942,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.7955,
+     "not_informative": 0.2045
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0036,
+     "infrastructure_and_utility_damage": 0.0026,
+     "not_humanitarian": 0.053,
+     "other_relevant_information": 0.0051,
+     "rescue_volunteering_or_donation_effort": 0.9358
+    },
+    "damage": {
+     "little_or_no_damage": 0.3523,
+     "mild_damage": 0.4219,
+     "severe_damage": 0.2258
+    }
+   },
+   "words": [
+    [
+     "Blood",
+     -0.0316
+    ],
+    [
+     "drive",
+     -0.0204
+    ],
+    [
+     "tomorrow",
+     -0.0196
+    ],
+    [
+     "at",
+     0.0069
+    ],
+    [
+     "the",
+     -0.01
+    ],
+    [
+     "community",
+     0.0124
+    ],
+    [
+     "center",
+     -0.0136
+    ],
+    [
+     "in",
+     -0.0087
+    ],
+    [
+     "League",
+     -0.0087
+    ],
+    [
+     "City,",
+     0.0106
+    ],
+    [
+     "donors",
+     0.0075
+    ],
+    [
+     "needed",
+     0.0076
+    ],
+    [
+     "#Delphine",
+     -0.0061
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.50745,
+    "lon": -95.09493,
+    "name": "League City"
+   }
+  },
+  {
+   "post_id": "p52",
+   "minute": 2890,
+   "text": "Roofs gone on the whole block in Freeport, houses split open #Delphine",
+   "image": "images/p52.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.4628028869628906,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9138,
+   "flagged": true,
+   "image_reliance": 0.622223973274231,
+   "probs": {
+    "informative": {
+     "informative": 0.9929,
+     "not_informative": 0.0071
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0276,
+     "infrastructure_and_utility_damage": 0.4628,
+     "not_humanitarian": 0.0354,
+     "other_relevant_information": 0.0507,
+     "rescue_volunteering_or_donation_effort": 0.4234
+    },
+    "damage": {
+     "little_or_no_damage": 0.1337,
+     "mild_damage": 0.6941,
+     "severe_damage": 0.1722
+    }
+   },
+   "words": [
+    [
+     "Roofs",
+     0.034
+    ],
+    [
+     "gone",
+     0.0064
+    ],
+    [
+     "on",
+     0.0043
+    ],
+    [
+     "the",
+     -0.0016
+    ],
+    [
+     "whole",
+     0.0015
+    ],
+    [
+     "block",
+     -0.0082
+    ],
+    [
+     "in",
+     0.0162
+    ],
+    [
+     "Freeport,",
+     -0.0076
+    ],
+    [
+     "houses",
+     0.0567
+    ],
+    [
+     "split",
+     0.0565
+    ],
+    [
+     "open",
+     0.0197
+    ],
+    [
+     "#Delphine",
+     -0.011
+    ]
+   ],
+   "heatmap": [
+    [
+     0.07680000364780426,
+     0.015599999576807022,
+     0.0044999998062849045,
+     -0.004100000020116568,
+     0.00559999980032444,
+     0.02410000003874302,
+     -0.015699999406933784
+    ],
+    [
+     -0.09229999780654907,
+     -0.08049999922513962,
+     -0.10999999940395355,
+     0.0006000000284984708,
+     -0.06030000001192093,
+     0.00570000009611249,
+     -0.039500001817941666
+    ],
+    [
+     0.013700000010430813,
+     -0.07530000060796738,
+     -0.05559999868273735,
+     0.014600000344216824,
+     0.06459999829530716,
+     -0.004800000227987766,
+     -0.042100001126527786
+    ],
+    [
+     0.09969999641180038,
+     -0.019300000742077827,
+     0.08070000261068344,
+     0.07609999924898148,
+     0.05290000140666962,
+     0.06700000166893005,
+     0.008799999952316284
+    ],
+    [
+     0.04969999939203262,
+     0.06260000169277191,
+     -0.06859999895095825,
+     0.04410000145435333,
+     -0.06400000303983688,
+     -0.04529999941587448,
+     0.03889999911189079
+    ],
+    [
+     -0.014800000004470348,
+     -0.03200000151991844,
+     0.016300000250339508,
+     0.026200000196695328,
+     -0.025100000202655792,
+     -0.011500000022351742,
+     0.01080000028014183
+    ],
+    [
+     -0.010499999858438969,
+     -0.006899999920278788,
+     -0.006899999920278788,
+     0.053599998354911804,
+     -0.0478999987244606,
+     0.01209999993443489,
+     0.02539999969303608
+    ]
+   ],
+   "location": {
+    "lat": 28.94968,
+    "lon": -95.34614,
+    "name": "Freeport"
+   }
+  },
+  {
+   "post_id": "p53",
+   "minute": 2960,
+   "text": "Cleanup crew of 20 heading to Kingwood Saturday morning. Bring gloves and boots #Delphine",
+   "image": "images/p53.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.618809163570404,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.6629,
+   "flagged": true,
+   "image_reliance": 0.5840029716491699,
+   "probs": {
+    "informative": {
+     "informative": 0.7075,
+     "not_informative": 0.2925
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0254,
+     "infrastructure_and_utility_damage": 0.0187,
+     "not_humanitarian": 0.3106,
+     "other_relevant_information": 0.0264,
+     "rescue_volunteering_or_donation_effort": 0.6188
+    },
+    "damage": {
+     "little_or_no_damage": 0.5736,
+     "mild_damage": 0.2622,
+     "severe_damage": 0.1642
+    }
+   },
+   "words": [
+    [
+     "Cleanup",
+     0.3235
+    ],
+    [
+     "crew",
+     -0.0369
+    ],
+    [
+     "of",
+     0.0303
+    ],
+    [
+     "20",
+     0.1592
+    ],
+    [
+     "heading",
+     -0.0699
+    ],
+    [
+     "to",
+     -0.0113
+    ],
+    [
+     "Kingwood",
+     -0.039
+    ],
+    [
+     "Saturday",
+     -0.03
+    ],
+    [
+     "morning.",
+     0.0512
+    ],
+    [
+     "Bring",
+     0.0119
+    ],
+    [
+     "gloves",
+     0.0245
+    ],
+    [
+     "and",
+     0.0343
+    ],
+    [
+     "boots",
+     0.0281
+    ],
+    [
+     "#Delphine",
+     -0.0065
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.041099999099969864,
+     -0.10050000250339508,
+     -0.06379999965429306,
+     -0.02019999921321869,
+     -0.07940000295639038,
+     -0.031199999153614044,
+     -0.014100000262260437
+    ],
+    [
+     -0.02810000069439411,
+     0.028599999845027924,
+     -0.0066999997943639755,
+     -0.039900001138448715,
+     -0.07029999792575836,
+     -0.04780000075697899,
+     -0.10679999738931656
+    ],
+    [
+     -0.05990000069141388,
+     0.03460000082850456,
+     -0.0044999998062849045,
+     0.025100000202655792,
+     -0.10530000180006027,
+     -0.061000000685453415,
+     -0.004600000102072954
+    ],
+    [
+     -0.0917000025510788,
+     -0.04259999841451645,
+     0.007799999788403511,
+     0.04690000042319298,
+     -0.07680000364780426,
+     -0.027799999341368675,
+     0.24469999969005585
+    ],
+    [
+     -0.06270000338554382,
+     -0.09210000187158585,
+     -0.0658000037074089,
+     -0.05660000070929527,
+     -0.059700001031160355,
+     -0.04830000177025795,
+     -0.09969999641180038
+    ],
+    [
+     -0.030500000342726707,
+     -0.08190000057220459,
+     -0.04100000113248825,
+     -0.01640000008046627,
+     -0.07779999822378159,
+     -0.039500001817941666,
+     -0.14020000398159027
+    ],
+    [
+     -0.03669999912381172,
+     -0.09470000118017197,
+     -0.011099999770522118,
+     0.010200000368058681,
+     -0.06729999929666519,
+     -0.041600000113248825,
+     -0.04910000041127205
+    ]
+   ],
+   "location": {
+    "lat": 30.04971,
+    "lon": -95.18463,
+    "name": "Kingwood"
+   }
+  },
+  {
+   "post_id": "p54",
+   "minute": 3040,
+   "text": "Can't believe how fast the water came up. Still processing all of it #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.5668590664863586,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.2982,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.3306,
+     "not_informative": 0.6694
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0127,
+     "infrastructure_and_utility_damage": 0.2464,
+     "not_humanitarian": 0.5669,
+     "other_relevant_information": 0.1349,
+     "rescue_volunteering_or_donation_effort": 0.0391
+    },
+    "damage": {
+     "little_or_no_damage": 0.612,
+     "mild_damage": 0.2625,
+     "severe_damage": 0.1255
+    }
+   },
+   "words": [
+    [
+     "Can't",
+     0.1743
+    ],
+    [
+     "believe",
+     -0.1032
+    ],
+    [
+     "how",
+     -0.0779
+    ],
+    [
+     "fast",
+     -0.1278
+    ],
+    [
+     "the",
+     -0.0383
+    ],
+    [
+     "water",
+     -0.3721
+    ],
+    [
+     "came",
+     0.0042
+    ],
+    [
+     "up.",
+     -0.0943
+    ],
+    [
+     "Still",
+     -0.2861
+    ],
+    [
+     "processing",
+     0.1137
+    ],
+    [
+     "all",
+     -0.1768
+    ],
+    [
+     "of",
+     -0.1756
+    ],
+    [
+     "it",
+     0.1976
+    ],
+    [
+     "#Delphine",
+     0.048
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p55",
+   "minute": 3120,
+   "text": "Man injured by debris while clearing his driveway in Friendswood, neighbors applying pressure, EMS on the way #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.6357808113098145,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.9398,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9523,
+     "not_informative": 0.0477
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0225,
+     "infrastructure_and_utility_damage": 0.6358,
+     "not_humanitarian": 0.0229,
+     "other_relevant_information": 0.0374,
+     "rescue_volunteering_or_donation_effort": 0.2815
+    },
+    "damage": {
+     "little_or_no_damage": 0.5475,
+     "mild_damage": 0.3241,
+     "severe_damage": 0.1284
+    }
+   },
+   "words": [
+    [
+     "Man",
+     -0.0674
+    ],
+    [
+     "injured",
+     -0.1689
+    ],
+    [
+     "by",
+     -0.0305
+    ],
+    [
+     "debris",
+     0.3748
+    ],
+    [
+     "while",
+     0.0232
+    ],
+    [
+     "clearing",
+     -0.1873
+    ],
+    [
+     "his",
+     0.1191
+    ],
+    [
+     "driveway",
+     -0.106
+    ],
+    [
+     "in",
+     -0.047
+    ],
+    [
+     "Friendswood,",
+     -0.1136
+    ],
+    [
+     "neighbors",
+     -0.0063
+    ],
+    [
+     "applying",
+     -0.0736
+    ],
+    [
+     "pressure,",
+     -0.0346
+    ],
+    [
+     "EMS",
+     -0.2579
+    ],
+    [
+     "on",
+     -0.272
+    ],
+    [
+     "the",
+     -0.1183
+    ],
+    [
+     "way",
+     -0.1657
+    ],
+    [
+     "#Delphine",
+     -0.0475
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.5294,
+    "lon": -95.20104,
+    "name": "Friendswood"
+   }
+  },
+  {
+   "post_id": "p56",
+   "minute": 3200,
+   "text": "Sinkhole opened on the frontage road near Beltway 8 and Bissonnet #Delphine",
+   "image": "images/p56.jpg",
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9128632545471191,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9597,
+   "flagged": true,
+   "image_reliance": 0.6191722750663757,
+   "probs": {
+    "informative": {
+     "informative": 0.987,
+     "not_informative": 0.013
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0136,
+     "infrastructure_and_utility_damage": 0.9129,
+     "not_humanitarian": 0.0244,
+     "other_relevant_information": 0.0159,
+     "rescue_volunteering_or_donation_effort": 0.0332
+    },
+    "damage": {
+     "little_or_no_damage": 0.2341,
+     "mild_damage": 0.6794,
+     "severe_damage": 0.0865
+    }
+   },
+   "words": [
+    [
+     "Sinkhole",
+     0.0943
+    ],
+    [
+     "opened",
+     0.0108
+    ],
+    [
+     "on",
+     -0.0108
+    ],
+    [
+     "the",
+     -0.0037
+    ],
+    [
+     "frontage",
+     0.0081
+    ],
+    [
+     "road",
+     -0.0025
+    ],
+    [
+     "near",
+     -0.0051
+    ],
+    [
+     "Beltway",
+     -0.0001
+    ],
+    [
+     "8",
+     -0.0061
+    ],
+    [
+     "and",
+     0.0008
+    ],
+    [
+     "Bissonnet",
+     -0.0018
+    ],
+    [
+     "#Delphine",
+     0.0025
+    ]
+   ],
+   "heatmap": [
+    [
+     -0.003100000089034438,
+     -0.003100000089034438,
+     -0.0015999999595806003,
+     -0.0005000000237487257,
+     0.012600000016391277,
+     0.0003000000142492354,
+     -0.02070000022649765
+    ],
+    [
+     0.019099999219179153,
+     0.006899999920278788,
+     0.017999999225139618,
+     0.03009999915957451,
+     0.04769999906420708,
+     0.014600000344216824,
+     -0.022299999371170998
+    ],
+    [
+     0.004100000020116568,
+     0.007199999876320362,
+     0.004999999888241291,
+     0.014299999922513962,
+     0.013199999928474426,
+     0.015699999406933784,
+     -0.025100000202655792
+    ],
+    [
+     0.015699999406933784,
+     0.04349999874830246,
+     0.0071000000461936,
+     0.007899999618530273,
+     -0.012900000438094139,
+     -0.00570000009611249,
+     -0.018200000748038292
+    ],
+    [
+     0.01899999938905239,
+     0.007699999958276749,
+     0.012299999594688416,
+     0.06040000170469284,
+     0.0003000000142492354,
+     0.012900000438094139,
+     -0.02850000001490116
+    ],
+    [
+     0.019099999219179153,
+     -0.0066999997943639755,
+     0.006000000052154064,
+     0.03180000185966492,
+     0.016100000590085983,
+     0.008100000210106373,
+     0.010099999606609344
+    ],
+    [
+     0.011800000444054604,
+     0.0026000000070780516,
+     0.004900000058114529,
+     0.006099999882280827,
+     -0.004900000058114529,
+     0.002199999988079071,
+     0.006399999838322401
+    ]
+   ],
+   "location": {
+    "lat": 29.59729,
+    "lon": -95.38551,
+    "name": "Beltway 8"
+   }
+  },
+  {
+   "post_id": "p57",
+   "minute": 3280,
+   "text": "Donations of cleaning supplies needed in Dickinson: bleach, masks, trash bags #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.9614259600639343,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.976,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9178,
+     "not_informative": 0.0822
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0037,
+     "infrastructure_and_utility_damage": 0.0109,
+     "not_humanitarian": 0.019,
+     "other_relevant_information": 0.0051,
+     "rescue_volunteering_or_donation_effort": 0.9614
+    },
+    "damage": {
+     "little_or_no_damage": 0.4171,
+     "mild_damage": 0.4348,
+     "severe_damage": 0.148
+    }
+   },
+   "words": [
+    [
+     "Donations",
+     0.0746
+    ],
+    [
+     "of",
+     -0.0026
+    ],
+    [
+     "cleaning",
+     -0.017
+    ],
+    [
+     "supplies",
+     0.0323
+    ],
+    [
+     "needed",
+     -0.0123
+    ],
+    [
+     "in",
+     -0.0018
+    ],
+    [
+     "Dickinson:",
+     0.0017
+    ],
+    [
+     "bleach,",
+     -0.0097
+    ],
+    [
+     "masks,",
+     0.0101
+    ],
+    [
+     "trash",
+     -0.01
+    ],
+    [
+     "bags",
+     0.0055
+    ],
+    [
+     "#Delphine",
+     0.0007
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.46079,
+    "lon": -95.05132,
+    "name": "Dickinson"
+   }
+  },
+  {
+   "post_id": "p58",
+   "minute": 3360,
+   "text": "Best sunset tonight, first clear sky in days #Delphine",
+   "image": null,
+   "category": "not_humanitarian",
+   "category_confidence": 0.9732396006584167,
+   "informative": "not_informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.0092,
+   "flagged": false,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.0457,
+     "not_informative": 0.9543
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0024,
+     "infrastructure_and_utility_damage": 0.0027,
+     "not_humanitarian": 0.9732,
+     "other_relevant_information": 0.0175,
+     "rescue_volunteering_or_donation_effort": 0.0041
+    },
+    "damage": {
+     "little_or_no_damage": 0.4729,
+     "mild_damage": 0.4048,
+     "severe_damage": 0.1223
+    }
+   },
+   "words": [
+    [
+     "Best",
+     0.0048
+    ],
+    [
+     "sunset",
+     -0.0019
+    ],
+    [
+     "tonight,",
+     0.0022
+    ],
+    [
+     "first",
+     0.0038
+    ],
+    [
+     "clear",
+     -0.0003
+    ],
+    [
+     "sky",
+     -0.0021
+    ],
+    [
+     "in",
+     -0.0039
+    ],
+    [
+     "days",
+     0.0066
+    ],
+    [
+     "#Delphine",
+     0.0076
+    ]
+   ],
+   "heatmap": null,
+   "location": null
+  },
+  {
+   "post_id": "p59",
+   "minute": 3460,
+   "text": "Elderly couple in Baytown hasn't been heard from in two days, last known on Bayway Dr. Can someone check? #DelphineRescue",
+   "image": null,
+   "category": "affected_individuals",
+   "category_confidence": 0.5154249668121338,
+   "informative": "informative",
+   "damage": "little_or_no_damage",
+   "p_urgent": 0.7648,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.8607,
+     "not_informative": 0.1393
+    },
+    "humanitarian": {
+     "affected_individuals": 0.5154,
+     "infrastructure_and_utility_damage": 0.0308,
+     "not_humanitarian": 0.1439,
+     "other_relevant_information": 0.0912,
+     "rescue_volunteering_or_donation_effort": 0.2186
+    },
+    "damage": {
+     "little_or_no_damage": 0.3655,
+     "mild_damage": 0.3422,
+     "severe_damage": 0.2923
+    }
+   },
+   "words": [
+    [
+     "Elderly",
+     0.1973
+    ],
+    [
+     "couple",
+     -0.1014
+    ],
+    [
+     "in",
+     0.0868
+    ],
+    [
+     "Baytown",
+     0.0808
+    ],
+    [
+     "hasn't",
+     0.1509
+    ],
+    [
+     "been",
+     -0.0362
+    ],
+    [
+     "heard",
+     0.2501
+    ],
+    [
+     "from",
+     -0.1738
+    ],
+    [
+     "in",
+     -0.059
+    ],
+    [
+     "two",
+     0.1217
+    ],
+    [
+     "days,",
+     0.0225
+    ],
+    [
+     "last",
+     -0.01
+    ],
+    [
+     "known",
+     0.0771
+    ],
+    [
+     "on",
+     -0.0251
+    ],
+    [
+     "Bayway",
+     -0.0688
+    ],
+    [
+     "Dr.",
+     0.0493
+    ],
+    [
+     "Can",
+     0.0755
+    ],
+    [
+     "someone",
+     0.011
+    ],
+    [
+     "check?",
+     0.0174
+    ],
+    [
+     "#DelphineRescue",
+     -0.1631
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.7355,
+    "lon": -94.97743,
+    "name": "Baytown"
+   }
+  },
+  {
+   "post_id": "p60",
+   "minute": 3560,
+   "text": "Power restored to about half of Galveston Island according to the utility #Delphine",
+   "image": null,
+   "category": "infrastructure_and_utility_damage",
+   "category_confidence": 0.9014471173286438,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9326,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9036,
+     "not_informative": 0.0964
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0073,
+     "infrastructure_and_utility_damage": 0.9014,
+     "not_humanitarian": 0.0185,
+     "other_relevant_information": 0.0488,
+     "rescue_volunteering_or_donation_effort": 0.0239
+    },
+    "damage": {
+     "little_or_no_damage": 0.2186,
+     "mild_damage": 0.4326,
+     "severe_damage": 0.3488
+    }
+   },
+   "words": [
+    [
+     "Power",
+     0.109
+    ],
+    [
+     "restored",
+     0.0209
+    ],
+    [
+     "to",
+     -0.0019
+    ],
+    [
+     "about",
+     0.0044
+    ],
+    [
+     "half",
+     0.0077
+    ],
+    [
+     "of",
+     0.0032
+    ],
+    [
+     "Galveston",
+     0.0168
+    ],
+    [
+     "Island",
+     0.0037
+    ],
+    [
+     "according",
+     -0.0056
+    ],
+    [
+     "to",
+     0.0136
+    ],
+    [
+     "the",
+     -0.0024
+    ],
+    [
+     "utility",
+     0.0283
+    ],
+    [
+     "#Delphine",
+     0.0237
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.38723,
+    "lon": -94.99274,
+    "name": "Galveston"
+   }
+  },
+  {
+   "post_id": "p61",
+   "minute": 3680,
+   "text": "FEMA disaster recovery center opening Monday in Pasadena #Delphine",
+   "image": null,
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.766330897808075,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.8759,
+   "flagged": true,
+   "image_reliance": 0.0,
+   "probs": {
+    "informative": {
+     "informative": 0.9156,
+     "not_informative": 0.0844
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0088,
+     "infrastructure_and_utility_damage": 0.1008,
+     "not_humanitarian": 0.0493,
+     "other_relevant_information": 0.0748,
+     "rescue_volunteering_or_donation_effort": 0.7663
+    },
+    "damage": {
+     "little_or_no_damage": 0.3214,
+     "mild_damage": 0.4012,
+     "severe_damage": 0.2773
+    }
+   },
+   "words": [
+    [
+     "FEMA",
+     0.1898
+    ],
+    [
+     "disaster",
+     -0.0585
+    ],
+    [
+     "recovery",
+     0.2579
+    ],
+    [
+     "center",
+     -0.064
+    ],
+    [
+     "opening",
+     -0.0167
+    ],
+    [
+     "Monday",
+     0.0062
+    ],
+    [
+     "in",
+     -0.0209
+    ],
+    [
+     "Pasadena",
+     0.0086
+    ],
+    [
+     "#Delphine",
+     0.0771
+    ]
+   ],
+   "heatmap": null,
+   "location": {
+    "lat": 29.69108,
+    "lon": -95.20921,
+    "name": "Pasadena"
+   }
+  },
+  {
+   "post_id": "p62",
+   "minute": 3800,
+   "text": "Our school gym in Pearland became a supply hub, hundreds of volunteers today. This city \ud83d\udcaa #Delphine",
+   "image": "images/p62.jpg",
+   "category": "rescue_volunteering_or_donation_effort",
+   "category_confidence": 0.993848979473114,
+   "informative": "informative",
+   "damage": "mild_damage",
+   "p_urgent": 0.9962,
+   "flagged": true,
+   "image_reliance": 0.5826157331466675,
+   "probs": {
+    "informative": {
+     "informative": 0.9904,
+     "not_informative": 0.0096
+    },
+    "humanitarian": {
+     "affected_individuals": 0.0017,
+     "infrastructure_and_utility_damage": 0.0007,
+     "not_humanitarian": 0.0026,
+     "other_relevant_information": 0.0011,
+     "rescue_volunteering_or_donation_effort": 0.9938
+    },
+    "damage": {
+     "little_or_no_damage": 0.112,
+     "mild_damage": 0.5945,
+     "severe_damage": 0.2935
+    }
+   },
+   "words": [
+    [
+     "Our",
+     -0.0002
+    ],
+    [
+     "school",
+     -0.0001
+    ],
+    [
+     "gym",
+     -0.0003
+    ],
+    [
+     "in",
+     0.0
+    ],
+    [
+     "Pearland",
+     -0.0004
+    ],
+    [
+     "became",
+     -0.0008
+    ],
+    [
+     "a",
+     -0.0002
+    ],
+    [
+     "supply",
+     0.0004
+    ],
+    [
+     "hub,",
+     -0.0005
+    ],
+    [
+     "hundreds",
+     0.0006
+    ],
+    [
+     "of",
+     0.0001
+    ],
+    [
+     "volunteers",
+     0.1004
+    ],
+    [
+     "today.",
+     0.0012
+    ],
+    [
+     "This",
+     -0.0005
+    ],
+    [
+     "city",
+     -0.0001
+    ],
+    [
+     "\ud83d\udcaa",
+     0.0
+    ],
+    [
+     "#Delphine",
+     -0.0
+    ]
+   ],
+   "heatmap": [
+    [
+     -9.999999747378752e-05,
+     -0.0,
+     -0.0,
+     0.0,
+     0.0,
+     -0.0,
+     -0.00019999999494757503
+    ],
+    [
+     0.00019999999494757503,
+     -9.999999747378752e-05,
+     -0.0,
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     -0.00019999999494757503,
+     -9.999999747378752e-05
+    ],
+    [
+     0.0,
+     0.00019999999494757503,
+     0.00019999999494757503,
+     -0.00019999999494757503,
+     -0.0005000000237487257,
+     -0.0005000000237487257,
+     -0.0003000000142492354
+    ],
+    [
+     9.999999747378752e-05,
+     -0.00039999998989515007,
+     -0.00039999998989515007,
+     -0.000699999975040555,
+     -0.0003000000142492354,
+     -0.0003000000142492354,
+     -0.00039999998989515007
+    ],
+    [
+     -0.00039999998989515007,
+     -0.0003000000142492354,
+     -0.00039999998989515007,
+     -0.0003000000142492354,
+     -0.00019999999494757503,
+     -0.00019999999494757503,
+     -0.00019999999494757503
+    ],
+    [
+     -0.00019999999494757503,
+     -0.00019999999494757503,
+     -0.0,
+     -0.0,
+     -0.00019999999494757503,
+     -0.00019999999494757503,
+     0.0
+    ],
+    [
+     -9.999999747378752e-05,
+     -9.999999747378752e-05,
+     0.0,
+     -0.00019999999494757503,
+     -0.00019999999494757503,
+     -0.0003000000142492354,
+     -0.00019999999494757503
+    ]
+   ],
+   "location": {
+    "lat": 29.56398,
+    "lon": -95.28643,
+    "name": "Pearland"
+   }
+  }
+ ],
+ "summaries": [
+  {
+   "minute": 720,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Dickinson",
+   "summary": "1 flagged post near Dickinson: 1 infrastructure damage [p10]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Friendswood",
+   "summary": "1 flagged post near Friendswood: 1 infrastructure damage [p12]. Most urgent: \"Elderly neighbor in Friendswood can't get out, water to her porch steps, she uses a wheelchair. Please help #DelphineRescue\" [p12].",
+   "source": "template",
+   "post_ids": [
+    "p12"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "League City",
+   "summary": "1 flagged post near League City: 1 infrastructure damage [p07]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Pearland",
+   "summary": "1 flagged post near Pearland: 1 rescue, volunteering or donations [p02]. Most urgent: \"Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine\" [p02].",
+   "source": "template",
+   "post_ids": [
+    "p02"
+   ]
+  },
+  {
+   "minute": 720,
+   "area": "Port Arthur",
+   "summary": "1 flagged post near Port Arthur: 1 rescue, volunteering or donations [p16]. Most urgent: \"Coast Guard helicopters overhead in Port Arthur, people waving from rooftops #Delphine\" [p16].",
+   "source": "template",
+   "post_ids": [
+    "p16"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Baytown",
+   "summary": "1 flagged post near Baytown: 1 infrastructure damage [p29]. Most urgent: \"Whole neighborhood in Baytown flooded, cars floating down the street #Delphine\" [p29].",
+   "source": "template",
+   "post_ids": [
+    "p29"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Deer Park",
+   "summary": "1 flagged post near Deer Park: 1 infrastructure damage [p20]. Most urgent: \"Highway 225 closed both directions near Deer Park due to high water #Delphine\" [p20].",
+   "source": "template",
+   "post_ids": [
+    "p20"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Dickinson",
+   "summary": "1 flagged post near Dickinson: 1 infrastructure damage [p10]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Friendswood",
+   "summary": "1 flagged post near Friendswood: 1 infrastructure damage [p12]. Most urgent: \"Elderly neighbor in Friendswood can't get out, water to her porch steps, she uses a wheelchair. Please help #DelphineRescue\" [p12].",
+   "source": "template",
+   "post_ids": [
+    "p12"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Fuqua",
+   "summary": "1 flagged post near Fuqua: 1 rescue, volunteering or donations [p23]. Most urgent: \"Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine\" [p23].",
+   "source": "template",
+   "post_ids": [
+    "p23"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Kingwood",
+   "summary": "1 flagged post near Kingwood: 1 infrastructure damage [p19]. Most urgent: \"Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine\" [p19].",
+   "source": "template",
+   "post_ids": [
+    "p19"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "League City",
+   "summary": "1 flagged post near League City: 1 infrastructure damage [p07]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Meyerland",
+   "summary": "1 flagged post near Meyerland: 1 rescue, volunteering or donations [p24]. Most urgent: \"National Guard high water trucks moving people out of Meyerland #Delphine\" [p24].",
+   "source": "template",
+   "post_ids": [
+    "p24"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Pasadena",
+   "summary": "1 flagged post near Pasadena: 1 rescue, volunteering or donations [p18]. Most urgent: \"Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine\" [p18].",
+   "source": "template",
+   "post_ids": [
+    "p18"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Pearland",
+   "summary": "2 flagged posts near Pearland: 1 rescue, volunteering or donations, 1 infrastructure damage [p02, p21]. Most urgent: \"Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine\" [p02].",
+   "source": "template",
+   "post_ids": [
+    "p02",
+    "p21"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Port Arthur",
+   "summary": "1 flagged post near Port Arthur: 1 rescue, volunteering or donations [p16]. Most urgent: \"Coast Guard helicopters overhead in Port Arthur, people waving from rooftops #Delphine\" [p16].",
+   "source": "template",
+   "post_ids": [
+    "p16"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Sugar Land",
+   "summary": "1 flagged post near Sugar Land: 1 rescue, volunteering or donations [p27]. Most urgent: \"Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine\" [p27].",
+   "source": "template",
+   "post_ids": [
+    "p27"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Unlocated",
+   "summary": "1 flagged post with no mappable location: 1 rescue, volunteering or donations [p30]. Most urgent: \"Two people with injuries at the corner of Main and Holcombe waiting for an ambulance, roads blocked #Delphine\" [p30].",
+   "source": "template",
+   "post_ids": [
+    "p30"
+   ]
+  },
+  {
+   "minute": 1440,
+   "area": "Westpark",
+   "summary": "1 flagged post near Westpark: 1 rescue, volunteering or donations [p25]. Most urgent: \"Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue\" [p25].",
+   "source": "template",
+   "post_ids": [
+    "p25"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Baytown",
+   "summary": "1 flagged post near Baytown: 1 infrastructure damage [p29]. Most urgent: \"Whole neighborhood in Baytown flooded, cars floating down the street #Delphine\" [p29].",
+   "source": "template",
+   "post_ids": [
+    "p29"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Beaumont",
+   "summary": "1 flagged post near Beaumont: 1 infrastructure damage [p32]. Most urgent: \"Hospital in Beaumont lost water pressure, transferring patients #Delphine\" [p32].",
+   "source": "template",
+   "post_ids": [
+    "p32"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Columbia",
+   "summary": "1 flagged post near Columbia: 1 infrastructure damage [p36]. Most urgent: \"Levee near Columbia Lakes is being overtopped, residents told to leave now #Delphine\" [p36].",
+   "source": "template",
+   "post_ids": [
+    "p36"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Deer Park",
+   "summary": "1 flagged post near Deer Park: 1 infrastructure damage [p20]. Most urgent: \"Highway 225 closed both directions near Deer Park due to high water #Delphine\" [p20].",
+   "source": "template",
+   "post_ids": [
+    "p20"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Dickinson",
+   "summary": "2 flagged posts near Dickinson: 2 infrastructure damage [p10, p38]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10",
+    "p38"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Friendswood",
+   "summary": "1 flagged post near Friendswood: 1 infrastructure damage [p12]. Most urgent: \"Elderly neighbor in Friendswood can't get out, water to her porch steps, she uses a wheelchair. Please help #DelphineRescue\" [p12].",
+   "source": "template",
+   "post_ids": [
+    "p12"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Fuqua",
+   "summary": "1 flagged post near Fuqua: 1 rescue, volunteering or donations [p23]. Most urgent: \"Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine\" [p23].",
+   "source": "template",
+   "post_ids": [
+    "p23"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Katy",
+   "summary": "1 flagged post near Katy: 1 rescue, volunteering or donations [p35]. Most urgent: \"Volunteers needed at the shelter in Katy to sort clothes and serve meals, shifts every 4 hours #Delphine\" [p35].",
+   "source": "template",
+   "post_ids": [
+    "p35"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Kemah",
+   "summary": "1 flagged post near Kemah: 1 infrastructure damage [p37]. Most urgent: \"Storm surge pushed boats onto the highway in Kemah #Delphine\" [p37].",
+   "source": "template",
+   "post_ids": [
+    "p37"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Kingwood",
+   "summary": "1 flagged post near Kingwood: 1 infrastructure damage [p19]. Most urgent: \"Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine\" [p19].",
+   "source": "template",
+   "post_ids": [
+    "p19"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "League City",
+   "summary": "1 flagged post near League City: 1 infrastructure damage [p07]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Meyerland",
+   "summary": "1 flagged post near Meyerland: 1 rescue, volunteering or donations [p24]. Most urgent: \"National Guard high water trucks moving people out of Meyerland #Delphine\" [p24].",
+   "source": "template",
+   "post_ids": [
+    "p24"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Pasadena",
+   "summary": "1 flagged post near Pasadena: 1 rescue, volunteering or donations [p18]. Most urgent: \"Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine\" [p18].",
+   "source": "template",
+   "post_ids": [
+    "p18"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Pearland",
+   "summary": "2 flagged posts near Pearland: 1 rescue, volunteering or donations, 1 infrastructure damage [p02, p21]. Most urgent: \"Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine\" [p02].",
+   "source": "template",
+   "post_ids": [
+    "p02",
+    "p21"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Port Arthur",
+   "summary": "2 flagged posts near Port Arthur: 1 infrastructure damage, 1 rescue, volunteering or donations [p33, p16]. Most urgent: \"Aerial view of Port Arthur this morning. It looks like a lake #Delphine\" [p33].",
+   "source": "template",
+   "post_ids": [
+    "p16",
+    "p33"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Sugar Land",
+   "summary": "1 flagged post near Sugar Land: 1 rescue, volunteering or donations [p27]. Most urgent: \"Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine\" [p27].",
+   "source": "template",
+   "post_ids": [
+    "p27"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Telephone Rd",
+   "summary": "1 flagged post near Telephone Rd: 1 infrastructure damage [p41]. Most urgent: \"Collapsed wall at the strip mall on Telephone Rd. Stay away from damaged buildings #Delphine\" [p41].",
+   "source": "template",
+   "post_ids": [
+    "p41"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Unlocated",
+   "summary": "2 flagged posts with no mappable location: 2 rescue, volunteering or donations [p31, p30]. Most urgent: \"So proud of my city. Strangers rescuing strangers all night #HoustonStrong #Delphine\" [p31].",
+   "source": "template",
+   "post_ids": [
+    "p30",
+    "p31"
+   ]
+  },
+  {
+   "minute": 2160,
+   "area": "Westpark",
+   "summary": "1 flagged post near Westpark: 1 rescue, volunteering or donations [p25]. Most urgent: \"Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue\" [p25].",
+   "source": "template",
+   "post_ids": [
+    "p25"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Baytown",
+   "summary": "2 flagged posts near Baytown: 2 infrastructure damage [p29, p50]. Most urgent: \"Whole neighborhood in Baytown flooded, cars floating down the street #Delphine\" [p29].",
+   "source": "template",
+   "post_ids": [
+    "p29",
+    "p50"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Beaumont",
+   "summary": "1 flagged post near Beaumont: 1 infrastructure damage [p32]. Most urgent: \"Hospital in Beaumont lost water pressure, transferring patients #Delphine\" [p32].",
+   "source": "template",
+   "post_ids": [
+    "p32"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Columbia",
+   "summary": "1 flagged post near Columbia: 1 infrastructure damage [p36]. Most urgent: \"Levee near Columbia Lakes is being overtopped, residents told to leave now #Delphine\" [p36].",
+   "source": "template",
+   "post_ids": [
+    "p36"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Deer Park",
+   "summary": "1 flagged post near Deer Park: 1 infrastructure damage [p20]. Most urgent: \"Highway 225 closed both directions near Deer Park due to high water #Delphine\" [p20].",
+   "source": "template",
+   "post_ids": [
+    "p20"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Dickinson",
+   "summary": "2 flagged posts near Dickinson: 2 infrastructure damage [p10, p38]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10",
+    "p38"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Friendswood",
+   "summary": "1 flagged post near Friendswood: 1 infrastructure damage [p12]. Most urgent: \"Elderly neighbor in Friendswood can't get out, water to her porch steps, she uses a wheelchair. Please help #DelphineRescue\" [p12].",
+   "source": "template",
+   "post_ids": [
+    "p12"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Fuqua",
+   "summary": "1 flagged post near Fuqua: 1 rescue, volunteering or donations [p23]. Most urgent: \"Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine\" [p23].",
+   "source": "template",
+   "post_ids": [
+    "p23"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Katy",
+   "summary": "1 flagged post near Katy: 1 rescue, volunteering or donations [p35]. Most urgent: \"Volunteers needed at the shelter in Katy to sort clothes and serve meals, shifts every 4 hours #Delphine\" [p35].",
+   "source": "template",
+   "post_ids": [
+    "p35"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Kemah",
+   "summary": "1 flagged post near Kemah: 1 infrastructure damage [p37]. Most urgent: \"Storm surge pushed boats onto the highway in Kemah #Delphine\" [p37].",
+   "source": "template",
+   "post_ids": [
+    "p37"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Kingwood",
+   "summary": "1 flagged post near Kingwood: 1 infrastructure damage [p19]. Most urgent: \"Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine\" [p19].",
+   "source": "template",
+   "post_ids": [
+    "p19"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "League City",
+   "summary": "2 flagged posts near League City: 1 infrastructure damage, 1 rescue, volunteering or donations [p07, p51]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07",
+    "p51"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Meyerland",
+   "summary": "2 flagged posts near Meyerland: 1 rescue, volunteering or donations, 1 infrastructure damage [p24, p44]. Most urgent: \"National Guard high water trucks moving people out of Meyerland #Delphine\" [p24].",
+   "source": "template",
+   "post_ids": [
+    "p24",
+    "p44"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Pasadena",
+   "summary": "2 flagged posts near Pasadena: 2 rescue, volunteering or donations [p18, p47]. Most urgent: \"Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine\" [p18].",
+   "source": "template",
+   "post_ids": [
+    "p18",
+    "p47"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Pearland",
+   "summary": "2 flagged posts near Pearland: 1 rescue, volunteering or donations, 1 infrastructure damage [p02, p21]. Most urgent: \"Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine\" [p02].",
+   "source": "template",
+   "post_ids": [
+    "p02",
+    "p21"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Port Arthur",
+   "summary": "3 flagged posts near Port Arthur: 2 infrastructure damage, 1 rescue, volunteering or donations [p46, p33, p16]. Most urgent: \"Still stuck on second floor in Port Arthur with 3 neighbors, no food since yesterday. Water won't go down #DelphineRescue\" [p46].",
+   "source": "template",
+   "post_ids": [
+    "p16",
+    "p33",
+    "p46"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Spencer Hwy",
+   "summary": "1 flagged post near Spencer Hwy: 1 infrastructure damage [p48]. Most urgent: \"Downed lines across Spencer Hwy, live wires in the water. Stay out #Delphine\" [p48].",
+   "source": "template",
+   "post_ids": [
+    "p48"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Sugar Land",
+   "summary": "1 flagged post near Sugar Land: 1 rescue, volunteering or donations [p27]. Most urgent: \"Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine\" [p27].",
+   "source": "template",
+   "post_ids": [
+    "p27"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Telephone Rd",
+   "summary": "1 flagged post near Telephone Rd: 1 infrastructure damage [p41]. Most urgent: \"Collapsed wall at the strip mall on Telephone Rd. Stay away from damaged buildings #Delphine\" [p41].",
+   "source": "template",
+   "post_ids": [
+    "p41"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Unlocated",
+   "summary": "3 flagged posts with no mappable location: 2 rescue, volunteering or donations, 1 infrastructure damage [p31, p30, p45]. Most urgent: \"So proud of my city. Strangers rescuing strangers all night #HoustonStrong #Delphine\" [p31].",
+   "source": "template",
+   "post_ids": [
+    "p30",
+    "p31",
+    "p45"
+   ]
+  },
+  {
+   "minute": 2880,
+   "area": "Westpark",
+   "summary": "1 flagged post near Westpark: 1 rescue, volunteering or donations [p25]. Most urgent: \"Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue\" [p25].",
+   "source": "template",
+   "post_ids": [
+    "p25"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Baytown",
+   "summary": "3 flagged posts near Baytown: 2 infrastructure damage, 1 people affected or injured [p29, p50, p59]. Most urgent: \"Whole neighborhood in Baytown flooded, cars floating down the street #Delphine\" [p29].",
+   "source": "template",
+   "post_ids": [
+    "p29",
+    "p50",
+    "p59"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Beaumont",
+   "summary": "1 flagged post near Beaumont: 1 infrastructure damage [p32]. Most urgent: \"Hospital in Beaumont lost water pressure, transferring patients #Delphine\" [p32].",
+   "source": "template",
+   "post_ids": [
+    "p32"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Beltway 8",
+   "summary": "1 flagged post near Beltway 8: 1 infrastructure damage [p56]. Most urgent: \"Sinkhole opened on the frontage road near Beltway 8 and Bissonnet #Delphine\" [p56].",
+   "source": "template",
+   "post_ids": [
+    "p56"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Columbia",
+   "summary": "1 flagged post near Columbia: 1 infrastructure damage [p36]. Most urgent: \"Levee near Columbia Lakes is being overtopped, residents told to leave now #Delphine\" [p36].",
+   "source": "template",
+   "post_ids": [
+    "p36"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Deer Park",
+   "summary": "1 flagged post near Deer Park: 1 infrastructure damage [p20]. Most urgent: \"Highway 225 closed both directions near Deer Park due to high water #Delphine\" [p20].",
+   "source": "template",
+   "post_ids": [
+    "p20"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Dickinson",
+   "summary": "3 flagged posts near Dickinson: 2 infrastructure damage, 1 rescue, volunteering or donations [p10, p57, p38]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10",
+    "p38",
+    "p57"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Freeport",
+   "summary": "1 flagged post near Freeport: 1 infrastructure damage [p52]. Most urgent: \"Roofs gone on the whole block in Freeport, houses split open #Delphine\" [p52].",
+   "source": "template",
+   "post_ids": [
+    "p52"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Friendswood",
+   "summary": "2 flagged posts near Friendswood: 2 infrastructure damage [p55, p12]. Most urgent: \"Man injured by debris while clearing his driveway in Friendswood, neighbors applying pressure, EMS on the way #Delphine\" [p55].",
+   "source": "template",
+   "post_ids": [
+    "p12",
+    "p55"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Fuqua",
+   "summary": "1 flagged post near Fuqua: 1 rescue, volunteering or donations [p23]. Most urgent: \"Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine\" [p23].",
+   "source": "template",
+   "post_ids": [
+    "p23"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Galveston",
+   "summary": "1 flagged post near Galveston: 1 infrastructure damage [p60]. Most urgent: \"Power restored to about half of Galveston Island according to the utility #Delphine\" [p60].",
+   "source": "template",
+   "post_ids": [
+    "p60"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Katy",
+   "summary": "1 flagged post near Katy: 1 rescue, volunteering or donations [p35]. Most urgent: \"Volunteers needed at the shelter in Katy to sort clothes and serve meals, shifts every 4 hours #Delphine\" [p35].",
+   "source": "template",
+   "post_ids": [
+    "p35"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Kemah",
+   "summary": "1 flagged post near Kemah: 1 infrastructure damage [p37]. Most urgent: \"Storm surge pushed boats onto the highway in Kemah #Delphine\" [p37].",
+   "source": "template",
+   "post_ids": [
+    "p37"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Kingwood",
+   "summary": "2 flagged posts near Kingwood: 1 infrastructure damage, 1 rescue, volunteering or donations [p19, p53]. Most urgent: \"Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine\" [p19].",
+   "source": "template",
+   "post_ids": [
+    "p19",
+    "p53"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "League City",
+   "summary": "2 flagged posts near League City: 1 infrastructure damage, 1 rescue, volunteering or donations [p07, p51]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07",
+    "p51"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Meyerland",
+   "summary": "2 flagged posts near Meyerland: 1 rescue, volunteering or donations, 1 infrastructure damage [p24, p44]. Most urgent: \"National Guard high water trucks moving people out of Meyerland #Delphine\" [p24].",
+   "source": "template",
+   "post_ids": [
+    "p24",
+    "p44"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Pasadena",
+   "summary": "2 flagged posts near Pasadena: 2 rescue, volunteering or donations [p18, p47]. Most urgent: \"Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine\" [p18].",
+   "source": "template",
+   "post_ids": [
+    "p18",
+    "p47"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Pearland",
+   "summary": "2 flagged posts near Pearland: 1 rescue, volunteering or donations, 1 infrastructure damage [p02, p21]. Most urgent: \"Lines out the door at the grocery store in Pearland, water and bread almost gone #Delphine\" [p02].",
+   "source": "template",
+   "post_ids": [
+    "p02",
+    "p21"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Port Arthur",
+   "summary": "3 flagged posts near Port Arthur: 2 infrastructure damage, 1 rescue, volunteering or donations [p46, p33, p16]. Most urgent: \"Still stuck on second floor in Port Arthur with 3 neighbors, no food since yesterday. Water won't go down #DelphineRescue\" [p46].",
+   "source": "template",
+   "post_ids": [
+    "p16",
+    "p33",
+    "p46"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Spencer Hwy",
+   "summary": "1 flagged post near Spencer Hwy: 1 infrastructure damage [p48]. Most urgent: \"Downed lines across Spencer Hwy, live wires in the water. Stay out #Delphine\" [p48].",
+   "source": "template",
+   "post_ids": [
+    "p48"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Sugar Land",
+   "summary": "1 flagged post near Sugar Land: 1 rescue, volunteering or donations [p27]. Most urgent: \"Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine\" [p27].",
+   "source": "template",
+   "post_ids": [
+    "p27"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Telephone Rd",
+   "summary": "1 flagged post near Telephone Rd: 1 infrastructure damage [p41]. Most urgent: \"Collapsed wall at the strip mall on Telephone Rd. Stay away from damaged buildings #Delphine\" [p41].",
+   "source": "template",
+   "post_ids": [
+    "p41"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Unlocated",
+   "summary": "3 flagged posts with no mappable location: 2 rescue, volunteering or donations, 1 infrastructure damage [p31, p30, p45]. Most urgent: \"So proud of my city. Strangers rescuing strangers all night #HoustonStrong #Delphine\" [p31].",
+   "source": "template",
+   "post_ids": [
+    "p30",
+    "p31",
+    "p45"
+   ]
+  },
+  {
+   "minute": 3600,
+   "area": "Westpark",
+   "summary": "1 flagged post near Westpark: 1 rescue, volunteering or donations [p25]. Most urgent: \"Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue\" [p25].",
+   "source": "template",
+   "post_ids": [
+    "p25"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "61st St",
+   "summary": "1 flagged post near 61st St: 1 infrastructure damage [p09]. Most urgent: \"Roof of the gas station on 61st St in Galveston just peeled off. Debris everywhere #Delphine\" [p09].",
+   "source": "template",
+   "post_ids": [
+    "p09"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Baytown",
+   "summary": "3 flagged posts near Baytown: 2 infrastructure damage, 1 people affected or injured [p29, p50, p59]. Most urgent: \"Whole neighborhood in Baytown flooded, cars floating down the street #Delphine\" [p29].",
+   "source": "template",
+   "post_ids": [
+    "p29",
+    "p50",
+    "p59"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Beaumont",
+   "summary": "1 flagged post near Beaumont: 1 infrastructure damage [p32]. Most urgent: \"Hospital in Beaumont lost water pressure, transferring patients #Delphine\" [p32].",
+   "source": "template",
+   "post_ids": [
+    "p32"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Bellfort Ave",
+   "summary": "1 flagged post near Bellfort Ave: 1 people affected or injured [p17]. Most urgent: \"Family of 5 trapped in attic on Bellfort Ave, water still rising. Please send help #DelphineRescue\" [p17].",
+   "source": "template",
+   "post_ids": [
+    "p17"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Beltway 8",
+   "summary": "1 flagged post near Beltway 8: 1 infrastructure damage [p56]. Most urgent: \"Sinkhole opened on the frontage road near Beltway 8 and Bissonnet #Delphine\" [p56].",
+   "source": "template",
+   "post_ids": [
+    "p56"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Brays Bayou",
+   "summary": "1 flagged post near Brays Bayou: 1 infrastructure damage [p13]. Most urgent: \"Brays Bayou is out of its banks near Meyerland. Streets underwater #Delphine #houstonflood\" [p13].",
+   "source": "template",
+   "post_ids": [
+    "p13"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Columbia",
+   "summary": "1 flagged post near Columbia: 1 infrastructure damage [p36]. Most urgent: \"Levee near Columbia Lakes is being overtopped, residents told to leave now #Delphine\" [p36].",
+   "source": "template",
+   "post_ids": [
+    "p36"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Deer Park",
+   "summary": "1 flagged post near Deer Park: 1 infrastructure damage [p20]. Most urgent: \"Highway 225 closed both directions near Deer Park due to high water #Delphine\" [p20].",
+   "source": "template",
+   "post_ids": [
+    "p20"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Dickinson",
+   "summary": "3 flagged posts near Dickinson: 2 infrastructure damage, 1 rescue, volunteering or donations [p10, p57, p38]. Most urgent: \"Water coming into the house in Dickinson, already ankle deep and rising. We have kids and a dog, need a boat #DelphineRescue\" [p10].",
+   "source": "template",
+   "post_ids": [
+    "p10",
+    "p38",
+    "p57"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Freeport",
+   "summary": "1 flagged post near Freeport: 1 infrastructure damage [p52]. Most urgent: \"Roofs gone on the whole block in Freeport, houses split open #Delphine\" [p52].",
+   "source": "template",
+   "post_ids": [
+    "p52"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Friendswood",
+   "summary": "2 flagged posts near Friendswood: 2 infrastructure damage [p55, p12]. Most urgent: \"Man injured by debris while clearing his driveway in Friendswood, neighbors applying pressure, EMS on the way #Delphine\" [p55].",
+   "source": "template",
+   "post_ids": [
+    "p12",
+    "p55"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Fuqua",
+   "summary": "1 flagged post near Fuqua: 1 rescue, volunteering or donations [p23]. Most urgent: \"Boat volunteers launching from the Kroger lot on Fuqua, we need more boats and life jackets #CajunNavy #Delphine\" [p23].",
+   "source": "template",
+   "post_ids": [
+    "p23"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Galveston",
+   "summary": "1 flagged post near Galveston: 1 infrastructure damage [p60]. Most urgent: \"Power restored to about half of Galveston Island according to the utility #Delphine\" [p60].",
+   "source": "template",
+   "post_ids": [
+    "p60"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Houston",
+   "summary": "1 flagged post near Houston: 1 rescue, volunteering or donations [p08]. Most urgent: \"Shelter open at the convention center downtown Houston, bring ID and medications if you can #Delphine\" [p08].",
+   "source": "template",
+   "post_ids": [
+    "p08"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Katy",
+   "summary": "1 flagged post near Katy: 1 rescue, volunteering or donations [p35]. Most urgent: \"Volunteers needed at the shelter in Katy to sort clothes and serve meals, shifts every 4 hours #Delphine\" [p35].",
+   "source": "template",
+   "post_ids": [
+    "p35"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Kemah",
+   "summary": "1 flagged post near Kemah: 1 infrastructure damage [p37]. Most urgent: \"Storm surge pushed boats onto the highway in Kemah #Delphine\" [p37].",
+   "source": "template",
+   "post_ids": [
+    "p37"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Kingwood",
+   "summary": "2 flagged posts near Kingwood: 1 infrastructure damage, 1 rescue, volunteering or donations [p19, p53]. Most urgent: \"Tree fell on the house next door in Kingwood, part of the roof is gone, family got out ok #Delphine\" [p19].",
+   "source": "template",
+   "post_ids": [
+    "p19",
+    "p53"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Kirby",
+   "summary": "1 flagged post near Kirby: 1 infrastructure damage [p14]. Most urgent: \"I-610 underpass at Kirby completely flooded, a car is stuck with the driver on the roof #Delphine\" [p14].",
+   "source": "template",
+   "post_ids": [
+    "p14"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "League City",
+   "summary": "2 flagged posts near League City: 1 infrastructure damage, 1 rescue, volunteering or donations [p07, p51]. Most urgent: \"Power just went out across our whole street in League City. Transformer blew, saw the flash #Delphine\" [p07].",
+   "source": "template",
+   "post_ids": [
+    "p07",
+    "p51"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Meyerland",
+   "summary": "2 flagged posts near Meyerland: 1 rescue, volunteering or donations, 1 infrastructure damage [p24, p44]. Most urgent: \"National Guard high water trucks moving people out of Meyerland #Delphine\" [p24].",
+   "source": "template",
+   "post_ids": [
+    "p24",
+    "p44"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Pasadena",
+   "summary": "3 flagged posts near Pasadena: 3 rescue, volunteering or donations [p18, p61, p47]. Most urgent: \"Our church in Pasadena is opening as a shelter. We have cots, food and dry clothes. Come as you are #Delphine\" [p18].",
+   "source": "template",
+   "post_ids": [
+    "p18",
+    "p47",
+    "p61"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Pearland",
+   "summary": "3 flagged posts near Pearland: 2 rescue, volunteering or donations, 1 infrastructure damage [p62, p02, p21]. Most urgent: \"Our school gym in Pearland became a supply hub, hundreds of volunteers today. This city \ud83d\udcaa #Delphine\" [p62].",
+   "source": "template",
+   "post_ids": [
+    "p02",
+    "p21",
+    "p62"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Port Arthur",
+   "summary": "3 flagged posts near Port Arthur: 2 infrastructure damage, 1 rescue, volunteering or donations [p46, p33, p16]. Most urgent: \"Still stuck on second floor in Port Arthur with 3 neighbors, no food since yesterday. Water won't go down #DelphineRescue\" [p46].",
+   "source": "template",
+   "post_ids": [
+    "p16",
+    "p33",
+    "p46"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Spencer Hwy",
+   "summary": "1 flagged post near Spencer Hwy: 1 infrastructure damage [p48]. Most urgent: \"Downed lines across Spencer Hwy, live wires in the water. Stay out #Delphine\" [p48].",
+   "source": "template",
+   "post_ids": [
+    "p48"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Sugar Land",
+   "summary": "1 flagged post near Sugar Land: 1 rescue, volunteering or donations [p27]. Most urgent: \"Dropping off water and diapers at the Sugar Land donation center, they need baby formula most #Delphine\" [p27].",
+   "source": "template",
+   "post_ids": [
+    "p27"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Telephone Rd",
+   "summary": "1 flagged post near Telephone Rd: 1 infrastructure damage [p41]. Most urgent: \"Collapsed wall at the strip mall on Telephone Rd. Stay away from damaged buildings #Delphine\" [p41].",
+   "source": "template",
+   "post_ids": [
+    "p41"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Unlocated",
+   "summary": "3 flagged posts with no mappable location: 2 rescue, volunteering or donations, 1 infrastructure damage [p31, p30, p45]. Most urgent: \"So proud of my city. Strangers rescuing strangers all night #HoustonStrong #Delphine\" [p31].",
+   "source": "template",
+   "post_ids": [
+    "p30",
+    "p31",
+    "p45"
+   ]
+  },
+  {
+   "minute": 4320,
+   "area": "Westpark",
+   "summary": "1 flagged post near Westpark: 1 rescue, volunteering or donations [p25]. Most urgent: \"Can someone check on the apartments on Westpark? Ground floor units underwater and people on the balconies #DelphineRescue\" [p25].",
+   "source": "template",
+   "post_ids": [
+    "p25"
+   ]
+  }
+ ]
+}

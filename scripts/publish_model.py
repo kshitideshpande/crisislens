@@ -18,7 +18,7 @@ import json
 import os
 from pathlib import Path
 
-ALLOW = ["model.int8.onnx", "meta.json", "export_report.json", "*.json", "*.txt", "*.codes", "*.model", "README.md"]
+ALLOW = ["*model.int8.onnx", "meta.json", "export_report.json", "*.json", "*.txt", "*.codes", "*.model", "README.md"]
 
 CARD = """---
 license: other
@@ -44,7 +44,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--repo", required=True, help="e.g. kshitid/crisislens-model")
     ap.add_argument("--exported", default="exported")
-    ap.add_argument("--run", default="outputs/fusion_gated/seed_42", help="for the scores in the model card")
+    ap.add_argument("--run", default="outputs/fusion_gated_md40/seed_42", help="for the scores in the model card")
     args = ap.parse_args()
 
     exported = Path(args.exported)
@@ -63,7 +63,7 @@ def main() -> None:
     if not info.private:
         raise SystemExit(f"{args.repo} exists and is PUBLIC. Make it private on huggingface.co first.")
     api.upload_folder(folder_path=str(exported), repo_id=args.repo, repo_type="model", allow_patterns=ALLOW,
-                      ignore_patterns=["model.onnx"], commit_message="Upload CrisisLens model")
+                      ignore_patterns=["*model.onnx"], commit_message="Upload CrisisLens model")
     print(f"Uploaded to https://huggingface.co/{args.repo} (private)")
 
 

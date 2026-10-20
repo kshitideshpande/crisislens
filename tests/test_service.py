@@ -139,7 +139,7 @@ def built_scenario(exported_model, tmp_path_factory) -> Path:
     scen = tmp_path_factory.mktemp("scenario")
     shutil.copy(ROOT / "demo" / "scenario" / "posts.csv", scen / "posts.csv")
     (scen / "images").mkdir()
-    for pid in ("p03", "p05", "p10"):
+    for pid in ("p03", "p07", "p10"):
         Image.new("RGB", (120, 90), (90, 120, 160)).save(scen / "images" / f"{pid}.jpg")
 
     def fake(query):  # every place lands in central Houston
@@ -155,7 +155,7 @@ def test_scenario_replay(built_scenario):
     posts = replay["posts"]
     assert len(posts) == 62 and replay["scenario"]["simulated"] is True
     with_img = [p for p in posts if p["image"]]
-    assert {p["post_id"] for p in with_img} == {"p03", "p05", "p10"} and len(with_img[0]["heatmap"]) == 7
+    assert {p["post_id"] for p in with_img} == {"p03", "p07", "p10"} and len(with_img[0]["heatmap"]) == 7
     assert all(p["location"] for p in posts if "Galveston" in p["text"])
     assert replay["summaries"] and all(s["source"] == "template" for s in replay["summaries"])
 
