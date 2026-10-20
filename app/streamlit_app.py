@@ -73,17 +73,27 @@ def load_credits() -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def setting(name: str) -> str | None:
+    """Environment variable (local, HF Space), else a Streamlit secret (Streamlit Community Cloud)."""
+    if os.environ.get(name):
+        return os.environ[name]
+    try:
+        return st.secrets.get(name)
+    except Exception:  # no secrets file
+        return None
+
+
 @st.cache_resource(show_spinner="Loading the model…")
 def load_predictor() -> tuple[OnnxPredictor | None, str]:
-    local = os.environ.get("MODEL_DIR")
+    local = setting("MODEL_DIR")
     try:
         if local:
             return OnnxPredictor(local), ""
-        repo = os.environ.get("MODEL_REPO")
+        repo = setting("MODEL_REPO")
         if repo:
             from huggingface_hub import snapshot_download
 
-            path = snapshot_download(repo, token=os.environ.get("HF_TOKEN"), local_dir="/tmp/crisislens-model")
+            path = snapshot_download(repo, token=setting("HF_TOKEN"), local_dir="/tmp/crisislens-model")
             return OnnxPredictor(path), ""
         return None, "No model configured (set MODEL_DIR locally, or MODEL_REPO + HF_TOKEN on the Space)."
     except Exception as e:  # keep the Replay tab alive even if the model fails
