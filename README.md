@@ -4,7 +4,7 @@
 ones responders need to see, sorts them by type of need, explains why, and puts them on a map with short, cited
 area summaries.
 
-**Live demo:** [huggingface.co/spaces/kshitid/crisislens](https://huggingface.co/spaces/kshitid/crisislens) · **Demo video:** _add link_
+**Live demo:** [crisislens-demo.streamlit.app](https://crisislens-demo.streamlit.app/) · **Demo video:** _add link_
 
 ![results](figures/main_results.png)
 
@@ -152,10 +152,14 @@ export GEMINI_API_KEY=...                              # optional; template summ
 python scripts/build_scenario.py build --model exported/
 MODEL_DIR=exported streamlit run app/streamlit_app.py  # local preview
 
-export HF_TOKEN=hf_write... HF_READ_TOKEN=hf_read...
-python scripts/publish_model.py --repo <user>/crisislens-model            # private model repo
-python scripts/deploy_space.py --space <user>/crisislens --model-repo <user>/crisislens-model
+hf auth login                                          # write token
+python scripts/publish_model.py --repo <user>/crisislens-model   # private model repo
 ```
+
+Hosting: [Streamlit Community Cloud](https://share.streamlit.io) (free), deployed from this repo with main file
+`app/streamlit_app.py` and two secrets, `MODEL_REPO = "<user>/crisislens-model"` and `HF_TOKEN` (a read token). The
+app installs only `app/requirements.txt` (no PyTorch) and needs about 1.9 GB of RAM. `scripts/deploy_space.py`
+still builds a Hugging Face Docker Space, which now needs a paid HF plan.
 
 API: `MODEL_DIR=exported uvicorn service.api:app --port 8000`, then `POST /classify` with
 `{"posts": [{"text": "...", "image_base64": "..."}]}`.
