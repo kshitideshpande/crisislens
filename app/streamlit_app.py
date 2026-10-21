@@ -78,9 +78,14 @@ def setting(name: str) -> str | None:
     if os.environ.get(name):
         return os.environ[name]
     try:
-        return st.secrets.get(name)
+        if name in st.secrets:
+            return str(st.secrets[name])
+        for section in st.secrets.values():  # also accept the keys under a [section] header
+            if hasattr(section, "get") and section.get(name):
+                return str(section[name])
     except Exception:  # no secrets file
-        return None
+        pass
+    return None
 
 
 @st.cache_resource(show_spinner="Loading the model…")
@@ -95,7 +100,8 @@ def load_predictor() -> tuple[OnnxPredictor | None, str]:
 
             path = snapshot_download(repo, token=setting("HF_TOKEN"), local_dir="/tmp/crisislens-model")
             return OnnxPredictor(path), ""
-        return None, "No model configured (set MODEL_DIR locally, or MODEL_REPO + HF_TOKEN on the Space)."
+        return None, ("No model configured. Locally, set MODEL_DIR=exported. When hosted, add the secrets "
+                      'MODEL_REPO = "<user>/crisislens-model" and HF_TOKEN = "<read token>".')
     except Exception as e:  # keep the Replay tab alive even if the model fails
         return None, f"Model failed to load: {type(e).__name__}: {e}"
 
