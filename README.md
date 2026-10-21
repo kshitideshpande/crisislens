@@ -4,7 +4,7 @@
 ones responders need to see, sorts them by type of need, explains why, and puts them on a map with short, cited
 area summaries.
 
-**Live demo:** [crisislens-demo.streamlit.app](https://crisislens-demo.streamlit.app/) · **Demo video:** _add link_
+**Live demo:** [crisislens-demo.streamlit.app](https://crisislens-demo.streamlit.app/) ·
 
 ![results](figures/main_results.png)
 
