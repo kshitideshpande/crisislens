@@ -260,6 +260,7 @@ def replay_tab(replay: dict) -> None:
 def try_tab() -> None:
     predictor, error = load_predictor()
     if predictor is None:
+        load_predictor.clear()  # don't cache a failure: retry on the next run (e.g. after secrets are added)
         st.warning(error)
         return
     st.write("Write a post like one you might see during a disaster. Add a photo or leave it text-only.")
